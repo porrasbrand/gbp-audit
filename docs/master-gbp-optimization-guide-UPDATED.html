@@ -1,0 +1,2519 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Google Business Profile Optimization Guide - Local Service Companies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Layout wrapper for sidebar + content */
+        .page-wrapper {
+            display: flex;
+            max-width: 1600px;
+            margin: 0 auto;
+            gap: 0;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar-nav {
+            position: sticky;
+            top: 20px;
+            width: 280px;
+            min-width: 280px;
+            height: fit-content;
+            max-height: calc(100vh - 40px);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            margin-right: 20px;
+            z-index: 100;
+        }
+
+        .sidebar-nav .sidebar-header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+            border-radius: 8px 8px 0 0;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .sidebar-nav li {
+            margin: 0;
+        }
+
+        .sidebar-nav a {
+            display: block;
+            padding: 10px 20px;
+            color: #374151;
+            text-decoration: none;
+            font-size: 0.9em;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-nav a:hover {
+            background: #eff6ff;
+            color: #1e40af;
+            border-left-color: #3b82f6;
+        }
+
+        .sidebar-nav a.active {
+            background: #dbeafe;
+            color: #1e40af;
+            border-left-color: #1e40af;
+            font-weight: 600;
+        }
+
+        .sidebar-nav .nav-section {
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #9ca3af;
+            padding: 15px 20px 5px 20px;
+            font-weight: 600;
+        }
+
+        .sidebar-nav .nav-divider {
+            height: 1px;
+            background: #e5e7eb;
+            margin: 10px 15px;
+        }
+
+        /* Sub-items styling */
+        .sidebar-nav a.sub-item {
+            padding-left: 35px;
+            font-size: 0.85em;
+            color: #6b7280;
+        }
+
+        .sidebar-nav a.sub-item:hover,
+        .sidebar-nav a.sub-item.active {
+            color: #1e40af;
+        }
+
+        /* Mobile sidebar toggle button */
+        .sidebar-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 1.5em;
+            transition: transform 0.2s ease;
+        }
+
+        .sidebar-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        /* Mobile sidebar overlay */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .sidebar-overlay.active {
+            display: block;
+        }
+
+        /* Progress indicator */
+        .sidebar-nav .progress-bar {
+            height: 3px;
+            background: #e5e7eb;
+            position: sticky;
+            top: 54px;
+            z-index: 1;
+        }
+
+        .sidebar-nav .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .intro {
+            background: #eff6ff;
+            padding: 30px 40px;
+            border-left: 4px solid #1e40af;
+            margin: 30px 40px;
+            border-radius: 4px;
+        }
+
+        .intro h2 {
+            color: #1e40af;
+            margin-bottom: 15px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            scroll-margin-top: 20px;
+        }
+
+        section[id] {
+            scroll-margin-top: 20px;
+        }
+
+        h2 {
+            color: #1e40af;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1e40af;
+        }
+
+        h3 {
+            color: #3b82f6;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+        }
+
+        h4 {
+            color: #495057;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+
+        .priority-critical {
+            background: #fef2f2;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .priority-critical h4 {
+            color: #dc3545;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .priority-high {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .priority-high h4 {
+            color: #856404;
+            font-weight: bold;
+        }
+
+        .priority-medium {
+            background: #e7f3ff;
+            border-left: 4px solid #0dcaf0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .priority-medium h4 {
+            color: #055160;
+            font-weight: bold;
+        }
+
+        .alert {
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-left: 4px solid;
+            border-radius: 4px;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+
+        .alert-danger {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            border-color: #0dcaf0;
+            color: #055160;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+            color: #1e40af;
+        }
+
+        .tip-box {
+            background: #f0fdf4;
+            border: 2px solid #86efac;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip-box h4 {
+            color: #15803d;
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border: 2px solid #fbbf24;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box h4 {
+            color: #b45309;
+            margin-bottom: 10px;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: #f8f9fa;
+            border-left: 4px solid #1e40af;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1e40af;
+        }
+
+        .metric-label {
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table thead {
+            background: #1e40af;
+            color: white;
+        }
+
+        table th,
+        table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .example-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .example-box strong {
+            color: #92400e;
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        /* Medium screens - collapsible sidebar */
+        @media (max-width: 1200px) {
+            .page-wrapper {
+                display: block;
+            }
+
+            .sidebar-nav {
+                position: fixed;
+                top: 0;
+                left: -320px;
+                width: 300px;
+                min-width: 300px;
+                height: 100vh;
+                max-height: 100vh;
+                margin: 0;
+                border-radius: 0;
+                transition: left 0.3s ease;
+                z-index: 1001;
+            }
+
+            .sidebar-nav.open {
+                left: 0;
+            }
+
+            .sidebar-nav .sidebar-header {
+                border-radius: 0;
+            }
+
+            .sidebar-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header .subtitle {
+                font-size: 1em;
+            }
+
+            .intro, .content {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            /* Make tables responsive on mobile */
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table thead {
+                display: none;
+            }
+
+            table, table tbody, table tr, table td {
+                display: block;
+                width: 100%;
+            }
+
+            table tr {
+                margin-bottom: 15px;
+                border: 1px solid #dee2e6;
+                border-radius: 4px;
+                padding: 10px;
+                background: white;
+            }
+
+            table td {
+                text-align: right;
+                padding: 10px 10px 10px 50%;
+                position: relative;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            table td:last-child {
+                border-bottom: none;
+            }
+
+            table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                text-align: left;
+                font-weight: bold;
+                color: #1e40af;
+            }
+
+            /* Two-column layout for TOC on mobile */
+            #table-of-contents div[style*="column-count"] {
+                column-count: 1 !important;
+            }
+
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile sidebar toggle button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle navigation">
+        <span id="toggle-icon">☰</span>
+    </button>
+
+    <!-- Mobile overlay -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <div class="page-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar-nav" id="sidebar">
+            <div class="sidebar-header">📍 Quick Navigation</div>
+            <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            <ul>
+                <li class="nav-section">Getting Started</li>
+                <li><a href="#profile-completeness" class="nav-link">1. Profile Completeness</a></li>
+                <li><a href="#sab-configuration" class="nav-link sub-item">1a. SAB Configuration</a></li>
+                <li><a href="#emergency-services" class="nav-link sub-item">1b. Emergency Services</a></li>
+
+                <li class="nav-divider"></li>
+                <li class="nav-section">Core Optimization</li>
+                <li><a href="#description" class="nav-link">2. Business Description</a></li>
+                <li><a href="#photos" class="nav-link">3. Photos & Videos</a></li>
+                <li><a href="#reviews" class="nav-link">4. Review Management</a></li>
+                <li><a href="#posts" class="nav-link">5. Google Posts</a></li>
+                <li><a href="#qa" class="nav-link">6. Website FAQ Schema</a></li>
+
+                <li class="nav-divider"></li>
+                <li class="nav-section">Services & Ads</li>
+                <li><a href="#services" class="nav-link">7. Services Menu</a></li>
+                <li><a href="#lsa-integration" class="nav-link sub-item">7a. Google Verified & LSA</a></li>
+
+                <li class="nav-divider"></li>
+                <li class="nav-section">Technical & Advanced</li>
+                <li><a href="#nap" class="nav-link">8. NAP & Citations</a></li>
+                <li><a href="#insights" class="nav-link">9. Performance Tracking</a></li>
+                <li><a href="#action-plan" class="nav-link">10. 30-Day Action Plan</a></li>
+                <li><a href="#mistakes" class="nav-link">11. Common Mistakes</a></li>
+                <li><a href="#advanced" class="nav-link">12. Advanced Tips</a></li>
+                <li><a href="#resources" class="nav-link">13. Resources & Tools</a></li>
+
+                <li class="nav-divider"></li>
+                <li><a href="#references" class="nav-link">📚 References & Sources</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+        <header>
+            <h1>📍 Master Google Business Profile Optimization Guide</h1>
+            <div class="subtitle">Complete Checklist for HVAC, Plumbing & Electrical Contractors</div>
+            <div class="subtitle" style="margin-top: 10px; font-size: 1em;">Your Roadmap to Local Search Domination</div>
+        </header>
+
+        <div class="intro">
+            <h2>Why This Matters</h2>
+            <p><strong>Your Google Business Profile is often the first thing customers see when searching for your services.</strong> A well-optimized profile can mean the difference between a full schedule and an empty calendar.</p>
+            <p style="margin-top: 15px;"><strong>85% of consumers</strong> use Google to evaluate local businesses before hiring. This guide gives you the exact steps to make your profile stand out, rank higher in local searches, and convert more views into booked jobs.</p>
+        </div>
+
+        <!-- UPDATE BANNER -->
+        <div class="alert alert-warning" style="margin: 30px 40px; background: #fff3cd; border: 2px solid #ffc107; padding: 20px; border-radius: 8px;">
+            <h3 style="color: #856404; margin-bottom: 10px;">⚠️ IMPORTANT: February 2026 Updates Applied</h3>
+            <p style="margin-bottom: 10px;">This guide has been updated to reflect major Google Business Profile changes:</p>
+            <ul style="margin-left: 20px; color: #856404;">
+                <li><strong>Q&A Section DISCONTINUED</strong> (Dec 2025) → Replaced with Website FAQ Schema strategy</li>
+                <li><strong>GBP Messaging DISCONTINUED</strong> (July 2024) → Replaced with WhatsApp integration</li>
+                <li><strong>Category best practice updated</strong> → Now recommends 5-6 categories max (not 10)</li>
+                <li><strong>Review response moderation</strong> → Responses now take 10 min to 30 days to appear</li>
+            </ul>
+            <p style="margin-top: 15px;"><a href="https://breakthrough3x.com/apps/gbp-audit/MASTER-GUIDELINE-CORRECTIONS.html" target="_blank" style="color: #1e40af; font-weight: bold;">📄 View Full Corrections Document →</a></p>
+        </div>
+
+        <div class="content">
+
+            <!-- TABLE OF CONTENTS -->
+            <section id="table-of-contents" style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin-bottom: 40px;">
+                <h2 style="border-bottom: none; margin-bottom: 20px;">📋 Table of Contents</h2>
+                <div style="column-count: 2; column-gap: 30px;">
+                    <ul style="list-style: none; margin: 0;">
+                        <li style="margin: 8px 0;"><a href="#profile-completeness" style="color: #1e40af; text-decoration: none;">1. 🏢 Profile Completeness & Accuracy</a></li>
+                        <li style="margin: 8px 0;"><a href="#sab-configuration" style="color: #1e40af; text-decoration: none;">1a. 🚨 Service Area Business (SAB) Setup</a></li>
+                        <li style="margin: 8px 0;"><a href="#emergency-services" style="color: #1e40af; text-decoration: none;">1b. ⚡ Emergency Services Configuration</a></li>
+                        <li style="margin: 8px 0;"><a href="#description" style="color: #1e40af; text-decoration: none;">2. ✍️ Business Description Optimization</a></li>
+                        <li style="margin: 8px 0;"><a href="#photos" style="color: #1e40af; text-decoration: none;">3. 📸 Photo & Video Optimization</a></li>
+                        <li style="margin: 8px 0;"><a href="#reviews" style="color: #1e40af; text-decoration: none;">4. ⭐ Review Management & Generation</a></li>
+                        <li style="margin: 8px 0;"><a href="#posts" style="color: #1e40af; text-decoration: none;">5. 📢 Google Posts & Updates</a></li>
+                        <li style="margin: 8px 0;"><a href="#qa" style="color: #1e40af; text-decoration: none;">6. 🌐 Website FAQ Schema</a></li>
+                        <li style="margin: 8px 0;"><a href="#services" style="color: #1e40af; text-decoration: none;">7. 🔧 Services Menu Optimization</a></li>
+                        <li style="margin: 8px 0;"><a href="#lsa-integration" style="color: #1e40af; text-decoration: none;">7a. 🏅 Google Verified & Local Services Ads</a></li>
+                        <li style="margin: 8px 0;"><a href="#nap" style="color: #1e40af; text-decoration: none;">8. 📍 NAP Consistency & Citations</a></li>
+                        <li style="margin: 8px 0;"><a href="#insights" style="color: #1e40af; text-decoration: none;">9. 📊 Performance Tracking</a></li>
+                        <li style="margin: 8px 0;"><a href="#action-plan" style="color: #1e40af; text-decoration: none;">10. 🎯 30-Day Action Plan</a></li>
+                        <li style="margin: 8px 0;"><a href="#mistakes" style="color: #1e40af; text-decoration: none;">11. ⚠️ Common Mistakes to Avoid</a></li>
+                        <li style="margin: 8px 0;"><a href="#advanced" style="color: #1e40af; text-decoration: none;">12. 🚀 Advanced Tips</a></li>
+                        <li style="margin: 8px 0;"><a href="#resources" style="color: #1e40af; text-decoration: none;">13. 📚 Additional Resources</a></li>
+                        <li style="margin: 8px 0;"><a href="#references" style="color: #6b7280; text-decoration: none; font-style: italic;">📖 References & Sources</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 1: PROFILE COMPLETENESS -->
+            <section id="profile-completeness">
+                <h2>1. 🏢 Profile Completeness & Accuracy</h2>
+                <p><strong>Impact:</strong> Complete profiles rank 2-3x higher in local search results.</p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: Basic Information</h4>
+                    <ul class="checklist">
+                        <li><strong>Business Name:</strong> Use your exact legal/DBA name (no keyword stuffing)</li>
+                        <li><strong>Primary Category:</strong> Choose the MOST specific category
+                            <ul>
+                                <li>✅ "HVAC Contractor" (not just "Contractor")</li>
+                                <li>✅ "Plumber" (not "Home Services")</li>
+                                <li>✅ "Electrician" (not "Repair Service")</li>
+                            </ul>
+                        </li>
+                        <li><strong>Address:</strong> Must match exactly across all directories (NAP consistency)</li>
+                        <li><strong>Phone Number:</strong> Local number (area code matching service area)</li>
+                        <li><strong>Website URL:</strong> Working link to your main website</li>
+                        <li><strong>Service Area:</strong> Define specific cities/zip codes you serve</li>
+                        <li><strong>Business Hours:</strong> Accurate hours including emergency/on-call availability</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Pro Tip: Service Area vs Physical Location</h4>
+                    <p><strong>If you have a physical location customers visit:</strong> Use that address and define service area</p>
+                    <p><strong>If you're mobile-only (no physical location):</strong> Hide address, show service area only</p>
+                    <p><strong>For HVAC/Plumbing/Electrical:</strong> Most are service-area businesses - consider hiding address if it's just an office/warehouse customers never visit.</p>
+                </div>
+
+                <div class="priority-high">
+                    <h4>⚠️ HIGH PRIORITY: Additional Categories</h4>
+                    <p><strong>Best Practice (2026):</strong> Add 2-4 additional categories (5-6 total maximum). Google allows up to 10, but fewer, more specific categories rank better. Choose categories that complete "This business IS a [category]."</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Primary Service</th>
+                                <th>Recommended Additional Categories</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>HVAC Contractor</strong></td>
+                                <td>Air Conditioning Contractor, Heating Contractor, Air Duct Cleaning Service, Furnace Repair Service, Heat Pump Supplier</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plumber</strong></td>
+                                <td>Emergency Plumber, Plumbing Supply Store, Drain Cleaning Service, Water Heater Installation Service, Septic System Service</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Electrician</strong></td>
+                                <td>Emergency Electrical Service, Lighting Contractor, Generator Installation Service, Electric Vehicle Charging Station Contractor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="priority-medium">
+                    <h4>📋 MEDIUM PRIORITY: Attributes</h4>
+                    <p>Enable all applicable attributes to help customers understand your business:</p>
+                    <ul class="checklist">
+                        <li>Identifies as veteran-owned (if applicable)</li>
+                        <li>Identifies as women-owned (if applicable)</li>
+                        <li>LGBTQ+ friendly</li>
+                        <li>Offers military discount</li>
+                        <li>Offers senior discount</li>
+                        <li>Free estimates</li>
+                        <li>Emergency services</li>
+                        <li>Licensed & insured</li>
+                        <li>Background checked technicians</li>
+                        <li>Family-owned</li>
+                        <li>Locally owned</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 1a: SERVICE AREA BUSINESS (SAB) CONFIGURATION -->
+            <section id="sab-configuration">
+                <h2>1a. 🚨 Service Area Business (SAB) Configuration</h2>
+                <p><strong>Impact:</strong> Critical for mobile contractors who don't have a storefront. Properly configured SAB profiles can rank just as high as brick-and-mortar locations.</p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: When to Hide Your Address</h4>
+                    <p><strong>You MUST configure as SAB if you:</strong></p>
+                    <ul class="checklist">
+                        <li>Travel to customer locations (not a storefront)</li>
+                        <li>Operate from home without customer visits</li>
+                        <li>Don't have a physical location customers can walk into</li>
+                        <li>Are a mobile HVAC, plumbing, or electrical contractor</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>⚠️ Google Penalty Risk:</strong> Showing an address customers can't visit violates Google's guidelines and can result in suspension.</p>
+                </div>
+
+                <h3>How to Configure SAB (Hide Address)</h3>
+                <ol>
+                    <li><strong>Go to your GBP dashboard</strong> → Click "Edit profile" → "Location"</li>
+                    <li><strong>Check the box:</strong> "I deliver goods and services to my customers"</li>
+                    <li><strong>Clear your address</strong> from the "Service area" section (Google will hide it)</li>
+                    <li><strong>Define service area:</strong>
+                        <ul>
+                            <li>Option 1: By city/zip codes (most accurate)</li>
+                            <li>Option 2: By radius (up to 200 miles, but be realistic)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Save and wait for verification</strong> (can take 3-5 days)</li>
+                </ol>
+
+                <div class="example-box">
+                    <strong>✅ GOOD Service Area Strategy:</strong><br>
+                    "We serve Dallas, Plano, Frisco, McKinney, Allen, Richardson, Carrollton, Lewisville, Flower Mound, and surrounding areas within 30 miles of Dallas."
+                    <br><br>
+                    <strong>❌ BAD Service Area:</strong><br>
+                    "We serve the entire state of Texas" (too broad, hurts local ranking)
+                </div>
+
+                <h3>SAB Verification Requirements</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Verification Method</th>
+                            <th>SAB Eligible?</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Postcard to address</strong></td>
+                            <td>✅ Yes</td>
+                            <td>Most common method (5-14 days)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone verification</strong></td>
+                            <td>✅ Yes</td>
+                            <td>If available in your area</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email verification</strong></td>
+                            <td>✅ Yes</td>
+                            <td>Rare, but instant if offered</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Video verification</strong></td>
+                            <td>⚠️ Maybe</td>
+                            <td>Required if Google suspects fraud</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="priority-high">
+                    <h4>🔥 PRO TIP: Multi-Location SAB Strategy</h4>
+                    <p>If you have multiple service areas, consider:</p>
+                    <ul>
+                        <li><strong>Single SAB with large service area</strong> - Best for small operations covering 1-2 counties</li>
+                        <li><strong>Multiple SAB profiles</strong> - Advanced strategy for large service areas (requires separate phone numbers, verification addresses, and legitimate business operations in each area)</li>
+                    </ul>
+                    <p><strong>⚠️ Warning:</strong> Creating fake SAB locations violates Google's terms and will result in suspension. Only create additional profiles if you have genuine business operations in those areas.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 1b: EMERGENCY SERVICES CONFIGURATION -->
+            <section id="emergency-services">
+                <h2>1b. ⚡ Emergency Services Configuration</h2>
+                <p><strong>Impact:</strong> Emergency service searches ("emergency plumber near me") have significantly higher conversion intent—customers need immediate help and are less price-sensitive. 76% of local searchers visit a business within 24 hours, and emergency customers often convert within minutes.</p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: 24/7 Hours Setup</h4>
+                    <p><strong>If you offer emergency services, you MUST configure:</strong></p>
+                    <ol>
+                        <li><strong>Hours of Operation:</strong>
+                            <ul>
+                                <li>Go to "Edit profile" → "Hours"</li>
+                                <li>Set as "Open 24 hours" for days you offer emergency service</li>
+                                <li>Use "Online operating hours" under "More hours" to show when you answer calls (if different from physical hours)</li>
+                            </ul>
+                            <p style="margin-top: 8px; font-size: 0.9em; color: #6b7280;"><em>Note: There is no "Emergency hours" option in GBP. Use main hours set to "Open 24 hours" for true 24/7 availability.</em></p>
+                        </li>
+                        <li><strong>Primary Phone Number:</strong>
+                            <ul>
+                                <li>Must be answered 24/7 (or go to voicemail with callback)</li>
+                                <li>Consider call answering service if you don't have on-call staff</li>
+                            </ul>
+                        </li>
+                        <li><strong>Appointment Links:</strong>
+                            <ul>
+                                <li>Add "Emergency Service Request" booking button</li>
+                                <li>Link to online scheduler or contact form</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <h3>Emergency Keywords in Description</h3>
+                <p>Include these phrases in your business description (first 250 characters if possible):</p>
+                <ul>
+                    <li>✅ "24/7 emergency service available"</li>
+                    <li>✅ "Same-day emergency repairs"</li>
+                    <li>✅ "After-hours emergency calls answered"</li>
+                    <li>✅ "Emergency [HVAC/plumbing/electrical] specialist"</li>
+                    <li>✅ "No extra charge for emergency calls" (if true)</li>
+                </ul>
+
+                <h3>Emergency-Specific Attributes</h3>
+                <p>Enable these attributes in your profile:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Where to Find It</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>24-hour service</strong></td>
+                            <td>Attributes → Amenities</td>
+                            <td>Shows badge in search results</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emergency services</strong></td>
+                            <td>Attributes → Highlights</td>
+                            <td>Qualifies for "emergency" searches</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Same-day service</strong></td>
+                            <td>Attributes → Highlights</td>
+                            <td>Attracts urgent customers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>On-call service</strong></td>
+                            <td>Attributes → Highlights</td>
+                            <td>Shows commitment to availability</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="example-box">
+                    <strong>✅ GOOD Emergency Description Integration:</strong><br>
+                    "ABC Plumbing provides 24/7 emergency plumbing service throughout Dallas-Fort Worth. Our licensed plumbers respond to emergency calls within 60 minutes for burst pipes, water heater failures, sewer backups, and gas leaks. No overtime charges for after-hours emergency calls. We arrive fully stocked to complete most repairs on the first visit..."
+                    <br><br>
+                    <strong>❌ BAD Emergency Mention:</strong><br>
+                    "We also do emergency work. Call us if you have an emergency."
+                </div>
+
+                <h3>Emergency Service Posts Strategy</h3>
+                <p>Post these regularly (monthly rotation):</p>
+                <ul>
+                    <li><strong>Winter:</strong> "Emergency furnace repair available 24/7 during cold snap"</li>
+                    <li><strong>Summer:</strong> "Same-day AC repair when temperatures hit 100°F"</li>
+                    <li><strong>Storms:</strong> "Emergency electrical service after storm damage"</li>
+                    <li><strong>Holidays:</strong> "Open 24/7 including Thanksgiving, Christmas, and New Year's"</li>
+                </ul>
+
+                <div class="priority-high">
+                    <h4>🔥 PRO TIP: Emergency Call Tracking</h4>
+                    <p>Use call tracking numbers to measure emergency vs. regular calls:</p>
+                    <ul>
+                        <li>Track which hours generate most emergency calls</li>
+                        <li>Calculate emergency call conversion rate</li>
+                        <li>Optimize staffing for peak emergency times</li>
+                        <li>Measure ROI of emergency service marketing</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 2: BUSINESS DESCRIPTION -->
+            <section id="description">
+                <h2>2. 📝 Business Description Optimization</h2>
+                <p><strong>Impact:</strong> Keywords in your description help Google understand what services you offer and improve local ranking.</p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: Write a Compelling Description</h4>
+                    <p><strong>Character Limit:</strong> 750 characters (use them ALL!)</p>
+                    <p><strong>First 250 characters are most important</strong> - they show in search results without "read more" click.</p>
+
+                    <ul class="checklist">
+                        <li><strong>First sentence:</strong> Who you are + primary service + service area</li>
+                        <li><strong>Second paragraph:</strong> Key differentiators (licensed, insured, experience, guarantees)</li>
+                        <li><strong>Third paragraph:</strong> Services offered (specific, not generic)</li>
+                        <li><strong>Fourth paragraph:</strong> Call to action + emergency availability</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <strong>✅ GOOD Example (HVAC):</strong><br>
+                    "ABC Heating & Cooling has served Dallas-Fort Worth homeowners since 1995 with expert HVAC installation, repair, and maintenance. Our licensed technicians specialize in residential air conditioning, furnace repair, heat pump installation, and indoor air quality solutions. We offer same-day emergency service, upfront pricing, and a 100% satisfaction guarantee on all work. Family-owned and operated, we provide free estimates and financing options. Call us 24/7 for emergency HVAC service or schedule your free consultation today. Serving Plano, Frisco, McKinney, Allen, and surrounding areas."
+                    <br><br>
+                    <strong>❌ BAD Example:</strong><br>
+                    "We are a heating and cooling company. We do installations and repairs. Call us for service. We are licensed and insured."
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Pro Tip: Keyword Integration</h4>
+                    <p>Include natural mentions of:</p>
+                    <ul>
+                        <li>Service types (installation, repair, maintenance, replacement, emergency)</li>
+                        <li>Equipment brands you work with (Trane, Carrier, Rheem, etc.)</li>
+                        <li>Service area cities</li>
+                        <li>Your unique selling points (same-day service, financing, warranties)</li>
+                    </ul>
+                    <p><strong>DON'T keyword stuff.</strong> Write for humans first, search engines second.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 3: PHOTOS & VIDEOS -->
+            <section id="photos">
+                <h2>3. 📸 Photo & Video Optimization</h2>
+                <p><strong>Impact:</strong> Businesses with photos receive 42% more direction requests and 35% more website clicks.</p>
+
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">9+</div>
+                        <div class="metric-label">Google's Minimum Photos</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">Regular</div>
+                        <div class="metric-label">Upload Frequency</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">1-3</div>
+                        <div class="metric-label">Videos Recommended</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.9em; color: #6b7280; margin-top: 10px;"><em>Note: Google's official minimum is 9 photos (3 exterior + 3 interior + 3 product/service) plus logo and cover. More photos are better, but quality and regular updates matter more than hitting arbitrary counts.</em></p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: Essential Photo Types</h4>
+                    <ul class="checklist">
+                        <li><strong>Logo:</strong> Square aspect ratio, high-res, clean background</li>
+                        <li><strong>Cover Photo:</strong> Landscape orientation, shows team/trucks/work in action</li>
+                        <li><strong>Profile Photo:</strong> Your logo or best team photo</li>
+                        <li><strong>Team Photos:</strong> 5-10 photos of technicians, office staff (builds trust)</li>
+                        <li><strong>Vehicle/Fleet Photos:</strong> Branded trucks/vans (shows professionalism)</li>
+                        <li><strong>Work-in-Progress:</strong> 20-30 photos of actual job sites (HVAC installs, plumbing work, electrical panels)</li>
+                        <li><strong>Before & After:</strong> 10-20 transformation photos (with customer permission)</li>
+                        <li><strong>Equipment Photos:</strong> New furnaces, AC units, water heaters installed</li>
+                        <li><strong>Interior/Office:</strong> Clean, professional workspace (if customers visit)</li>
+                    </ul>
+                </div>
+
+                <div class="priority-high">
+                    <h4>⚠️ HIGH PRIORITY: Photo Best Practices</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Requirement</th>
+                                <th>Why It Matters</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Resolution</td>
+                                <td>250px minimum, 720px recommended</td>
+                                <td>Higher resolution = better quality</td>
+                            </tr>
+                            <tr>
+                                <td>Format</td>
+                                <td>JPG or PNG</td>
+                                <td>Universal compatibility</td>
+                            </tr>
+                            <tr>
+                                <td>File Size</td>
+                                <td>10KB - 5MB</td>
+                                <td>Fast loading</td>
+                            </tr>
+                            <tr>
+                                <td>Lighting</td>
+                                <td>Natural or well-lit</td>
+                                <td>Professional appearance</td>
+                            </tr>
+                            <tr>
+                                <td>Branding</td>
+                                <td>Logo watermark optional</td>
+                                <td>Brand recognition</td>
+                            </tr>
+                            <tr>
+                                <td>Captions</td>
+                                <td>Add descriptive text</td>
+                                <td>Better searchability</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Photo Don'ts</h4>
+                    <ul>
+                        <li>❌ Stock photos (Google penalizes these)</li>
+                        <li>❌ Blurry or dark images</li>
+                        <li>❌ Photos with text overlays (except small logo watermark)</li>
+                        <li>❌ Irrelevant images</li>
+                        <li>❌ Duplicates</li>
+                        <li>❌ Photos showing customer faces without permission</li>
+                    </ul>
+                </div>
+
+                <div class="priority-medium">
+                    <h4>📋 MEDIUM PRIORITY: Video Content</h4>
+                    <p>Videos dramatically increase engagement. Create:</p>
+                    <ul class="checklist">
+                        <li><strong>Company Introduction:</strong> 30-60 second video about your business</li>
+                        <li><strong>Service Overview:</strong> Show your process (job walkthrough)</li>
+                        <li><strong>Meet the Team:</strong> Introduce your technicians</li>
+                        <li><strong>Customer Testimonials:</strong> Happy customer video reviews</li>
+                        <li><strong>Educational Content:</strong> Quick tips (how to change AC filter, when to call plumber, etc.)</li>
+                    </ul>
+                    <p><strong>Video specs:</strong> 75MB max file size, 720p minimum resolution, MP4/MOV/WMV formats</p>
+                    <p style="font-size: 0.9em; color: #6b7280; margin-top: 5px;"><em>Note: Google's official guideline is 30 seconds max, but longer videos will upload if they're under 75MB. Use video compression if needed.</em></p>
+                </div>
+            </section>
+
+            <!-- SECTION 4: REVIEWS -->
+            <section id="reviews">
+                <h2>4. ⭐ Review Management & Generation</h2>
+                <p><strong>Impact:</strong> Reviews are one of the most important local ranking factors, contributing ~16-17% of ranking signals. More reviews + higher ratings = better rankings + more customer trust.</p>
+
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">10+</div>
+                        <div class="metric-label">Ranking Boost Threshold</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">4.5+</div>
+                        <div class="metric-label">Average Star Rating Target</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">Regular</div>
+                        <div class="metric-label">New Reviews (Recency Matters)</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.9em; color: #6b7280; margin-top: 10px;"><em>Note: Research shows a noticeable ranking boost at 10 reviews. Aim for 50+ total for strong social proof, but focus on recency—new reviews matter more than total count.</em></p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: Review Generation System</h4>
+                    <ul class="checklist">
+                        <li><strong>Ask EVERY satisfied customer</strong> for a review (verbally + follow-up)</li>
+                        <li><strong>Make it easy:</strong> Send direct review link via text/email immediately after job</li>
+                        <li><strong>Timing matters:</strong> Ask within 24-48 hours while experience is fresh</li>
+                        <li><strong>Train technicians:</strong> "If we did a great job today, we'd really appreciate a quick Google review"</li>
+                        <li><strong>Never incentivize:</strong> Don't offer discounts/payments for reviews (violates Google policy)</li>
+                        <li><strong>Respond to ALL reviews:</strong> Thank positive reviews, address negative ones professionally</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Pro Tip: Get Your Review Link</h4>
+                    <p><strong>Desktop:</strong> Google your business → Click reviews → Click "Ask for reviews" → Copy short link</p>
+                    <p><strong>Mobile:</strong> Open Google Maps → Your business → Share → Copy review link</p>
+                    <p><strong>Shorten it:</strong> Use bit.ly or similar to create easy-to-type link like: <strong>bit.ly/ABCHVACReview</strong></p>
+                    <p>Put this link on invoices, email signatures, business cards, truck signage!</p>
+                </div>
+
+                <div class="priority-high">
+                    <h4>⚠️ HIGH PRIORITY: Review Response Strategy</h4>
+
+                    <p><strong>Responding to Positive Reviews:</strong></p>
+                    <div class="example-box">
+                        <strong>Template:</strong><br>
+                        "Thank you so much for the 5-star review, [Name]! We're thrilled to hear that [technician name] provided excellent [service type]. Your satisfaction is our top priority, and we appreciate you choosing [Company Name]. Looking forward to serving you again!"
+                    </div>
+
+                    <p><strong>Responding to Negative Reviews:</strong></p>
+                    <div class="example-box">
+                        <strong>Template:</strong><br>
+                        "Thank you for bringing this to our attention, [Name]. We sincerely apologize for [specific issue]. This doesn't meet our standards. I'd like to discuss this further and make it right. Please contact me directly at [phone/email] so we can resolve this. - [Manager Name], [Company Name]"
+                    </div>
+
+                    <ul class="checklist">
+                        <li>Respond within 24-48 hours (faster is better)</li>
+                        <li>Personalize each response (don't copy/paste)</li>
+                        <li>Mention specific details from their review</li>
+                        <li>Use keywords naturally (HVAC repair, plumbing service, etc.)</li>
+                        <li>Never argue or get defensive</li>
+                        <li>Take disputes offline (offer phone/email to resolve)</li>
+                    </ul>
+                    <div class="alert alert-warning" style="margin-top: 15px;">
+                        <strong>⚠️ Moderation Delay (2025):</strong> Google now moderates business responses before publishing. Your response may take <strong>10 minutes to 30 days</strong> to appear. Responses can be rejected if they contain promotional language, links, or confrontational tone. Write professionally to avoid rejection.
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Review Red Flags (Avoid These!)</h4>
+                    <ul>
+                        <li>❌ Buying fake reviews</li>
+                        <li>❌ Reviewing yourself or asking employees to review</li>
+                        <li>❌ Asking friends/family to review (Google can detect)</li>
+                        <li>❌ Offering incentives for reviews</li>
+                        <li>❌ Cherry-picking only happy customers to ask</li>
+                        <li>❌ Creating multiple GBP listings for same location</li>
+                    </ul>
+                    <p><strong>Penalties (2025-2026 - Stricter Enforcement):</strong></p>
+                    <ul style="margin-top: 10px;">
+                        <li>🚫 Temporary review collection freeze</li>
+                        <li>🚫 Existing reviews hidden during investigation</li>
+                        <li>🚫 Public warning badge visible to customers</li>
+                        <li>🚫 Permanent loss of review collection ability</li>
+                        <li>🚫 Profile suspension or removal</li>
+                        <li>🚫 <strong>FTC fines up to $51,744 per fake review</strong> (US businesses)</li>
+                    </ul>
+                    <p style="margin-top: 10px; color: #dc2626;"><strong>⚠️ Google's AI-powered enforcement is stricter than ever.</strong> Review deletions surged 600% in early 2025. Even patterns that "look suspicious" can trigger investigation.</p>
+                </div>
+
+                <div class="tip-box" style="margin-top: 20px;">
+                    <h4>💡 Note: Pseudonymous Reviews (New 2024-2025)</h4>
+                    <p>Google now allows reviewers to use <strong>nicknames and alternate profile photos</strong>. This means:</p>
+                    <ul>
+                        <li>You may not recognize customers by name in reviews</li>
+                        <li>Harder to verify if reviewer was an actual customer</li>
+                        <li>Focus on review content details to assess authenticity</li>
+                        <li>Legitimate reviews will mention specific services, dates, or staff names</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 5: POSTS & UPDATES -->
+            <section id="posts">
+                <h2>5. 📢 Google Posts & Updates</h2>
+                <p><strong>Impact:</strong> Regular posts signal active business, improve engagement, and can highlight special offers.</p>
+
+                <div class="priority-high">
+                    <h4>⚠️ HIGH PRIORITY: Posting Schedule</h4>
+                    <p><strong>Recommended Frequency:</strong> 1-3 posts per week (minimum 1 per week)</p>
+                    <p style="font-size: 0.9em; color: #6b7280;"><em>Consistency matters more than frequency. Weekly posting outperforms sporadic daily posts followed by long gaps.</em></p>
+                    <p><strong>Post Types to Rotate:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>What's New:</strong> Announcements, new services, equipment upgrades</li>
+                        <li><strong>Offers:</strong> Seasonal specials, discounts, financing promotions</li>
+                        <li><strong>Events:</strong> Community involvement, trade shows, charity work</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-info" style="margin-top: 15px;">
+                    <strong>📅 Post Visibility & Expiration:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li><strong>"What's New" posts:</strong> Lose prominent placement after ~7 days, but remain visible in your post history</li>
+                        <li><strong>Offer/Event posts:</strong> Stay visible until their end date passes</li>
+                        <li><strong>Archive:</strong> All posts move to "View all" after 6 months (no longer highlighted on profile)</li>
+                        <li><strong>"Outdated" threshold:</strong> Posts older than 3 months don't appear prominently in search</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <strong>Example Post: Seasonal Offer (HVAC)</strong><br>
+                    <strong>Title:</strong> Spring AC Tune-Up Special 🌸<br>
+                    <strong>Description:</strong> "Get your AC ready for summer! This month only: $79 complete system tune-up (reg. $129). Our certified technicians will clean coils, check refrigerant, test all components, and ensure peak efficiency. Don't wait for the heat wave - schedule now!"<br>
+                    <strong>CTA Button:</strong> "Call Now" or "Learn More"<br>
+                    <strong>Photo:</strong> Technician working on outdoor AC unit<br>
+                    <strong>Start/End Date:</strong> Valid dates for offer
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Pro Tip: Content Calendar Ideas</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>HVAC Topics</th>
+                                <th>Plumbing Topics</th>
+                                <th>Electrical Topics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>January</td>
+                                <td>Furnace maintenance tips</td>
+                                <td>Prevent frozen pipes</td>
+                                <td>Winter electrical safety</td>
+                            </tr>
+                            <tr>
+                                <td>March</td>
+                                <td>Spring AC tune-up special</td>
+                                <td>Sump pump check</td>
+                                <td>Outdoor lighting install</td>
+                            </tr>
+                            <tr>
+                                <td>June</td>
+                                <td>Summer cooling tips</td>
+                                <td>Sprinkler system service</td>
+                                <td>Generator installation</td>
+                            </tr>
+                            <tr>
+                                <td>September</td>
+                                <td>Fall furnace check-up</td>
+                                <td>Water heater flush</td>
+                                <td>Electrical panel upgrade</td>
+                            </tr>
+                            <tr>
+                                <td>December</td>
+                                <td>Holiday hours + emergency service</td>
+                                <td>Holiday plumbing tips</td>
+                                <td>Holiday lighting install</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="priority-medium">
+                    <h4>📋 MEDIUM PRIORITY: Post Best Practices</h4>
+                    <ul class="checklist">
+                        <li>Keep posts concise: <strong>80-100 words optimal</strong> (max 1,500 characters)</li>
+                        <li>Always include a high-quality photo: <strong>1200×900 px (4:3 ratio)</strong> recommended</li>
+                        <li>Add a clear call-to-action (Call, Book, Learn More, Get Quote)</li>
+                        <li>Use keywords naturally (HVAC repair Dallas, emergency plumber, etc.)</li>
+                        <li>Front-load important info in first sentence (visible in preview)</li>
+                        <li>Include pricing when possible (builds trust)</li>
+                        <li>Set expiration dates for time-limited offers</li>
+                        <li>Track performance (views, clicks) and adjust</li>
+                    </ul>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #6b7280;"><em>Note: There's no minimum word count. Short, punchy posts with clear CTAs often outperform longer content.</em></p>
+                </div>
+            </section>
+
+            <!-- SECTION 6: FAQ SCHEMA STRATEGY (Replaces discontinued Q&A) -->
+            <section id="qa">
+                <h2>6. 🌐 Website FAQ Schema Strategy</h2>
+                
+                <div class="alert alert-warning" style="margin-bottom: 20px;">
+                    <strong>⚠️ IMPORTANT UPDATE (December 2025):</strong> Google has <strong>discontinued</strong> the Q&A feature on Business Profiles. The Q&A API was removed November 3, 2025, and the public-facing Q&A section is being removed from all listings. This section has been updated with the replacement strategy.
+                </div>
+
+                <p><strong>What Replaced Q&A:</strong> Google now uses an AI-powered "Ask Maps" feature (powered by Gemini) that automatically generates answers to customer questions by pulling from your GBP data and website content.</p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: Create Website FAQ with Schema Markup</h4>
+                    <p><strong>Since customers can no longer see your Q&A on GBP, move that content to your website with proper schema markup.</strong></p>
+                    
+                    <p>Google's AI pulls answers from:</p>
+                    <ul class="checklist">
+                        <li>Your GBP business description and services</li>
+                        <li>Your website content (especially FAQ pages with schema)</li>
+                        <li>Your reviews and photos</li>
+                        <li>Third-party data about your business</li>
+                    </ul>
+                </div>
+
+                <div class="priority-high">
+                    <h4>⚠️ HIGH PRIORITY: FAQ Page Requirements</h4>
+                    <p>Create a dedicated FAQ page on your website covering these topics:</p>
+
+                    <ul class="checklist">
+                        <li><strong>Pricing:</strong> "How much does [service] cost?" → Provide range or "starting at $X"</li>
+                        <li><strong>Availability:</strong> "Do you offer emergency service?" → Yes/no + hours</li>
+                        <li><strong>Service Area:</strong> "Do you serve [city]?" → List all areas served</li>
+                        <li><strong>Licensing:</strong> "Are you licensed and insured?" → Yes + license numbers</li>
+                        <li><strong>Payment:</strong> "What payment methods do you accept?" → List options + financing</li>
+                        <li><strong>Guarantees:</strong> "Do you offer warranties?" → Explain warranty terms</li>
+                        <li><strong>Scheduling:</strong> "How quickly can you come out?" → Same-day/next-day availability</li>
+                        <li><strong>Services:</strong> "What brands do you work on?" → List major brands</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <strong>FAQPage Schema Markup Example:</strong><br><br>
+                    <pre style="background: #1e1e1e; color: #9cdcfe; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 12px;">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does AC installation cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AC installation costs range from $3,500-$7,500 depending on size, efficiency rating (SEER), and home requirements. We offer free estimates and financing options."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Do you offer 24/7 emergency HVAC service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We provide 24/7 emergency HVAC service throughout the Dallas-Fort Worth area. Our technicians can typically arrive within 2-4 hours."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</pre>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Implementation Steps</h4>
+                    <ol style="margin-left: 20px;">
+                        <li>Create an FAQ page on your website with <strong>5-10 strong questions</strong> (quality over quantity)</li>
+                        <li>Add FAQPage schema markup (JSON-LD format shown above)</li>
+                        <li>Ensure Q&A content is <strong>visible on the page</strong> (not hidden in code only)</li>
+                        <li>Keep answers concise and factual (under 3,000 characters each)</li>
+                        <li>Validate with <a href="https://search.google.com/test/rich-results" target="_blank" style="color: #1e40af;">Google Rich Results Test</a></li>
+                        <li>Submit page to Google Search Console for indexing</li>
+                    </ol>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #6b7280;"><em>Note: A focused set of 5-10 well-written Q&As is more effective than 15+ generic ones. Match questions to how real customers ask them.</em></p>
+                </div>
+
+                <div class="alert alert-warning" style="margin-bottom: 15px;">
+                    <h4>⚠️ Important: FAQ Rich Results Eligibility (August 2023 Change)</h4>
+                    <p>Google restricted FAQ rich results (expandable dropdowns in search) to <strong>government and health websites only</strong>. Home service businesses (HVAC, plumbing, electrical) will <strong>NOT</strong> see FAQ rich snippets in Google search results.</p>
+                    <p style="margin-top: 10px;"><strong>However, FAQ schema is still highly valuable because:</strong></p>
+                    <ul style="margin-top: 5px;">
+                        <li>Pages with FAQ markup are <strong>3.2x more likely</strong> to appear in Google AI Overviews</li>
+                        <li>Helps Ask Maps/Gemini pull accurate answers about your business</li>
+                        <li>Improves voice search responses</li>
+                        <li>AI platforms (ChatGPT, Perplexity) cite FAQ schema data</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-success">
+                    <h4>✅ Why This Strategy Still Works</h4>
+                    <ul>
+                        <li>Your answers live on YOUR website (you control it permanently)</li>
+                        <li>Schema markup helps Google's AI cite your content directly</li>
+                        <li>No risk of competitors posting fake questions on your profile</li>
+                        <li>Works across Google Search AND Maps (via AI, not rich snippets)</li>
+                        <li>Future-proofs your content if Google expands FAQ eligibility</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 7: SERVICES MENU -->
+            <section id="services">
+                <h2>7. 📋 Services Menu</h2>
+                <p><strong>Impact:</strong> Detailed service listings improve visibility for specific search queries and provide pricing transparency. Research shows services CAN impact rankings, especially for explicit keyword searches.</p>
+
+                <div class="alert alert-info" style="margin-bottom: 15px;">
+                    <strong>📏 Character Limits:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li><strong>Service Name:</strong> 58 characters max</li>
+                        <li><strong>Service Description:</strong> 300 characters max</li>
+                        <li><strong>Price:</strong> Optional (Fixed, Range, "From", or leave blank)</li>
+                    </ul>
+                </div>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: Add Your Core Services</h4>
+                    <p>Google allows you to add individual services with descriptions and pricing. <strong>Start with your top 5-10 services</strong> and expand from there.</p>
+                    <p style="font-size: 0.9em; color: #6b7280; margin-top: 5px;"><em>Tip: Use Google's auto-suggested services when available—they come with icons and match user search intent better.</em></p>
+
+                    <p><strong>HVAC Services Example:</strong></p>
+                    <ul class="checklist">
+                        <li>AC Installation - "Complete air conditioning system installation with free estimate" - $3,500+</li>
+                        <li>AC Repair - "Fast, reliable AC repair service. Same-day available" - Starting at $89</li>
+                        <li>Furnace Installation - "Energy-efficient furnace installation with warranty" - $2,800+</li>
+                        <li>Furnace Repair - "Expert furnace repair and diagnostics" - Starting at $89</li>
+                        <li>Duct Cleaning - "Professional air duct cleaning for better air quality" - $399</li>
+                        <li>Thermostat Installation - "Smart thermostat installation and setup" - $199-$399</li>
+                        <li>Maintenance Plans - "Annual HVAC tune-up and maintenance plans" - $149/year</li>
+                        <li>Emergency Service - "24/7 emergency HVAC service" - After-hours rates apply</li>
+                    </ul>
+
+                    <p><strong>Plumbing Services Example:</strong></p>
+                    <ul class="checklist">
+                        <li>Drain Cleaning - "Professional drain cleaning and rooter service" - Starting at $99</li>
+                        <li>Water Heater Installation - "Tank and tankless water heater installation" - $1,200+</li>
+                        <li>Leak Repair - "Fast leak detection and repair service" - Starting at $89</li>
+                        <li>Sewer Line Repair - "Trenchless and traditional sewer line repair" - $3,000+</li>
+                        <li>Fixture Installation - "Faucet, toilet, sink installation" - $150-$400</li>
+                        <li>Repiping - "Whole-house repiping and pipe replacement" - $4,000+</li>
+                        <li>Sump Pump Service - "Sump pump installation and repair" - $500-$1,500</li>
+                        <li>Emergency Plumbing - "24/7 emergency plumbing service" - After-hours rates apply</li>
+                    </ul>
+
+                    <p><strong>Electrical Services Example:</strong></p>
+                    <ul class="checklist">
+                        <li>Panel Upgrade - "Electrical panel upgrade and replacement" - $1,500-$3,000</li>
+                        <li>Outlet Installation - "New outlet and receptacle installation" - $125-$250</li>
+                        <li>Lighting Installation - "Indoor and outdoor lighting installation" - $100-$500</li>
+                        <li>Generator Installation - "Standby generator installation and service" - $3,000+</li>
+                        <li>EV Charger Installation - "Electric vehicle charging station install" - $500-$2,000</li>
+                        <li>Ceiling Fan Installation - "Ceiling fan installation and wiring" - $150-$300</li>
+                        <li>Electrical Inspection - "Home electrical safety inspection" - $200-$400</li>
+                        <li>Emergency Electrical - "24/7 emergency electrical service" - After-hours rates apply</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Pro Tip: Pricing Strategy</h4>
+                    <p><strong>Show pricing when possible!</strong> Customers want transparency. Options:</p>
+                    <ul>
+                        <li><strong>Starting at $X:</strong> Good for diagnostic/service call fees</li>
+                        <li><strong>$X - $Y range:</strong> Good for installations with variables</li>
+                        <li><strong>"Free Estimate":</strong> For complex jobs requiring site visit</li>
+                        <li><strong>Leave blank:</strong> If prices change frequently or require custom quotes</li>
+                    </ul>
+                    <p>Even rough pricing builds trust and filters out tire-kickers.</p>
+                </div>
+
+                <div class="priority-medium">
+                    <h4>📋 Service Menu Maintenance</h4>
+                    <ul class="checklist">
+                        <li><strong>Review quarterly:</strong> Update services list at least every 3 months</li>
+                        <li><strong>Add seasonal services:</strong> Promote relevant services based on time of year</li>
+                        <li><strong>Remove discontinued services:</strong> Keep your list current and accurate</li>
+                        <li><strong>Monitor performance:</strong> If a service isn't getting traction, revise the description</li>
+                        <li><strong>Match your website:</strong> Ensure service names/descriptions align with your site</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 7a: GOOGLE VERIFIED & LOCAL SERVICES ADS -->
+            <section id="lsa-integration">
+                <h2>7a. 🏅 Google Verified & Local Services Ads (LSA)</h2>
+                <p><strong>Impact:</strong> LSA profiles with the "Google Verified" badge appear ABOVE organic GBP results, giving you prime visibility for high-intent local searches.<sup><a href="#ref-1">[1]</a></sup></p>
+
+                <div class="alert alert-warning" style="margin-bottom: 20px;">
+                    <strong>⚠️ MAJOR UPDATE (October 2025):</strong> Google has consolidated all LSA trust badges into a single <strong>"Google Verified"</strong> badge (blue checkmark). The previous "Google Guaranteed," "Google Screened," and "License Verified by Google" badges have been retired. <strong>The $2,000 money-back guarantee program has been discontinued</strong> as of November 7, 2025. The underlying verification requirements (background checks, license, insurance) remain unchanged.
+                </div>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: What is Google Verified?</h4>
+                    <p><strong>Google Verified badge (blue checkmark) means:</strong></p>
+                    <ul class="checklist">
+                        <li>✅ Google has verified your business license</li>
+                        <li>✅ Background-checked your business and employees</li>
+                        <li>✅ Insurance verification completed</li>
+                        <li>✅ Your business appears in the top LSA section of local searches</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>⚡ ROI Impact:</strong> LSA leads average $23/lead compared to $70+/lead for traditional Google Ads across industries.<sup><a href="#ref-2">[2]</a></sup> Pay-per-lead means you only pay for actual customer contacts, not clicks.</p>
+                    <p style="margin-top: 10px; color: #92400e;"><strong>📌 Note:</strong> With the money-back guarantee discontinued, customer reviews and ratings are now the PRIMARY trust signal for LSA businesses. Focus on building strong reviews!</p>
+                </div>
+
+                <h3>How Local Services Ads Work</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Google Ads (PPC)</th>
+                            <th>Local Services Ads</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Positioning</strong></td>
+                            <td>Below LSA, above organic</td>
+                            <td>TOP of search results (above everything)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pricing Model</strong></td>
+                            <td>Pay-per-click (PPC)</td>
+                            <td>Pay-per-lead (only charged for valid calls/messages)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Badge</strong></td>
+                            <td>"Ad" label</td>
+                            <td>"Google Verified" blue checkmark</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone Number</strong></td>
+                            <td>Your business number</td>
+                            <td>Google forwarding number (tracks calls)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Targeting</strong></td>
+                            <td>Keyword-based</td>
+                            <td>Service-based (Google chooses when to show you)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>LSA Eligibility Requirements (HVAC/Plumbing/Electrical)</h3>
+                <ol>
+                    <li><strong>Business License:</strong>
+                        <ul>
+                            <li>Valid state/city contractor license</li>
+                            <li>License number must match your business name</li>
+                            <li>Google verifies directly with state licensing board</li>
+                        </ul>
+                    </li>
+                    <li><strong>Insurance:</strong>
+                        <ul>
+                            <li>General liability insurance (minimum $200K General Aggregate coverage)<sup><a href="#ref-3">[3]</a></sup></li>
+                            <li>Workers' compensation (if you have employees)</li>
+                            <li>Google requires proof from insurer (Certificate of Insurance)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Background Checks:</strong>
+                        <ul>
+                            <li>Owner/operator background check required</li>
+                            <li>All employees who visit customer homes must be screened</li>
+                            <li>Google partners with Pinkerton or Evident for screening<sup><a href="#ref-4">[4]</a></sup></li>
+                            <li>Annual re-verification required to maintain badge</li>
+                        </ul>
+                    </li>
+                    <li><strong>Google Business Profile:</strong>
+                        <ul>
+                            <li>Must have verified GBP</li>
+                            <li>Must maintain 3.0+ star average review rating<sup><a href="#ref-5">[5]</a></sup></li>
+                            <li>Some categories require minimum 5 reviews to go live</li>
+                            <li>Must respond to reviews regularly</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="example-box">
+                    <strong>📊 Typical LSA Costs for Home Services (2026):<sup><a href="#ref-6">[6]</a></sup></strong><br>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li><strong>HVAC:</strong> $45-85 per lead</li>
+                        <li><strong>Plumbing:</strong> $25-55 per lead</li>
+                        <li><strong>Electrical:</strong> $30-60 per lead</li>
+                        <li><strong>Industry average (all LSA):</strong> ~$23 per lead vs ~$70+ per lead for Google Ads<sup><a href="#ref-2">[2]</a></sup></li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Note:</strong> Costs vary by market competition, season, and service type. Start conservative and track your actual cost-per-booked-job.</p>
+                </div>
+
+                <h3>How to Apply for Google Verified (LSA)</h3>
+                <ol>
+                    <li><strong>Go to:</strong> <a href="https://ads.google.com/local-services-ads" target="_blank">ads.google.com/local-services-ads</a></li>
+                    <li><strong>Select your category:</strong>
+                        <ul>
+                            <li>HVAC Contractor</li>
+                            <li>Plumber / Plumbing Service</li>
+                            <li>Electrician / Electrical Service</li>
+                        </ul>
+                    </li>
+                    <li><strong>Complete business verification:</strong>
+                        <ul>
+                            <li>Upload license documents</li>
+                            <li>Upload insurance certificates</li>
+                            <li>Submit to background checks (takes 3-5 business days)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Set budget and service area:</strong>
+                        <ul>
+                            <li>Weekly budget (start with $300-500/week)</li>
+                            <li>Service area (must match your GBP service area)</li>
+                            <li>Services offered (be specific)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Wait for approval:</strong>
+                        <ul>
+                            <li>Verification takes 5-10 business days</li>
+                            <li>Google will email when approved</li>
+                            <li>Badge appears immediately after approval</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="alert alert-info">
+                    <strong>💵 LSA Costs to Know:</strong>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li><strong>Monthly subscription fee:</strong> ~$50/month for Google Verified badge (in addition to lead costs)</li>
+                        <li><strong>Lead costs:</strong> Vary by category and market (see cost table above)</li>
+                        <li><strong>Budget control:</strong> Set weekly maximums to control spend</li>
+                    </ul>
+                </div>
+
+                <h3>LSA + GBP Synergy Strategy</h3>
+                <p><strong>Why you need BOTH:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>What Shows</th>
+                            <th>Benefit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Customer searches "plumber near me"</strong></td>
+                            <td>Your LSA profile at top + GBP in Map Pack</td>
+                            <td>Double visibility, dominates search results</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Budget runs out for day</strong></td>
+                            <td>LSA disappears, but GBP still ranks organically</td>
+                            <td>You still get leads even when not paying</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Customer clicks LSA, doesn't call</strong></td>
+                            <td>They see your GBP with reviews/photos</td>
+                            <td>Second chance to convert via organic listing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LSA service area = GBP service area</strong></td>
+                            <td>Consistent presence across both platforms</td>
+                            <td>Builds trust, reinforces legitimacy</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="priority-high">
+                    <h4>🔥 PRO TIP: Optimize LSA Profile Like GBP</h4>
+                    <p>Your LSA profile is separate from GBP but uses similar data:</p>
+                    <ul>
+                        <li><strong>Upload photos:</strong> Use the SAME photos from your GBP (consistency)</li>
+                        <li><strong>Business description:</strong> Use the same description as GBP (Google rewards consistency)</li>
+                        <li><strong>Services list:</strong> Match your GBP services menu exactly</li>
+                        <li><strong>Hours:</strong> Must match GBP hours (especially emergency/24-7)</li>
+                        <li><strong>Reviews:</strong> LSA reviews are separate - ask customers to leave reviews on BOTH platforms</li>
+                    </ul>
+                </div>
+
+                <h3>LSA Dispute Management</h3>
+                <p><strong>Important:</strong> You only pay for valid leads. Dispute these:</p>
+                <ul>
+                    <li>🚫 Spam calls or robocalls</li>
+                    <li>🚫 Calls under 30 seconds (likely wrong number)</li>
+                    <li>🚫 Customers calling about services you don't offer</li>
+                    <li>🚫 Existing customers calling for follow-up (not new leads)</li>
+                    <li>🚫 Calls outside your service area</li>
+                </ul>
+                <p><strong>How to dispute:</strong> Log in to LSA dashboard → "Leads" → Select lead → "Dispute" → Select reason → Submit (Google reviews within 24-48 hours)</p>
+
+                <div class="priority-medium">
+                    <h4>💰 LSA Budget Recommendations by Market</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Market Size</th>
+                                <th>Weekly Budget</th>
+                                <th>Expected Leads/Week</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Small City (&lt;100k population)</strong></td>
+                                <td>$200-400</td>
+                                <td>4-8 leads</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mid-Size City (100k-500k)</strong></td>
+                                <td>$400-800</td>
+                                <td>8-15 leads</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Large Metro (&gt;500k)</strong></td>
+                                <td>$800-1,500</td>
+                                <td>15-30 leads</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Start conservative, scale up based on conversion rates and ROI.</strong></p>
+                </div>
+            </section>
+
+            <!-- SECTION 8: NAP CONSISTENCY -->
+            <section id="nap">
+                <h2>8. 🗂️ NAP Consistency (Name, Address, Phone)</h2>
+                <p><strong>Impact:</strong> Inconsistent business info across the web confuses Google and hurts local rankings.</p>
+
+                <div class="priority-critical">
+                    <h4>🚨 CRITICAL: Audit Your NAP Across The Web</h4>
+                    <p>Your business name, address, and phone number must be EXACTLY the same everywhere:</p>
+
+                    <div class="example-box">
+                        <strong>❌ WRONG (Inconsistent):</strong><br>
+                        - Google: "ABC Heating & Cooling LLC"<br>
+                        - Yelp: "ABC Heating and Cooling"<br>
+                        - Facebook: "A.B.C. Heating & Cooling"<br>
+                        - Website: "ABC HVAC Services"<br>
+                        <br>
+                        <strong>✅ RIGHT (Consistent):</strong><br>
+                        - Everywhere: "ABC Heating & Cooling"<br>
+                        - Same address format: "123 Main St, Suite 100" (not "123 Main Street, Ste 100")<br>
+                        - Same phone: "(555) 123-4567" (not "555-123-4567" or "555.123.4567")
+                    </div>
+                </div>
+
+                <div class="priority-high">
+                    <h4>⚠️ HIGH PRIORITY: Citation Audit Checklist</h4>
+                    <p>Check and correct your NAP on these platforms. <strong>Aim for 30-70 high-quality citations</strong> (quality over quantity—too many low-quality listings can hurt):</p>
+
+                    <p><strong>Essential Platforms:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>Google Business Profile</strong> (most important!)</li>
+                        <li><strong>Bing Places</strong></li>
+                        <li><strong>Apple Maps</strong></li>
+                        <li><strong>Yelp</strong></li>
+                        <li><strong>Facebook Business Page</strong></li>
+                        <li><strong>Nextdoor</strong> (hyper-local, highly trusted)</li>
+                        <li><strong>Better Business Bureau (BBB)</strong></li>
+                    </ul>
+
+                    <p><strong>Home Services Platforms:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>Angi (formerly Angie's List)</strong></li>
+                        <li><strong>HomeAdvisor</strong></li>
+                        <li><strong>Thumbtack</strong></li>
+                        <li><strong>Porch</strong></li>
+                    </ul>
+
+                    <p><strong>General Directories:</strong></p>
+                    <ul class="checklist">
+                        <li><strong>Yellow Pages</strong></li>
+                        <li><strong>Chamber of Commerce</strong></li>
+                        <li><strong>Industry-specific directories:</strong>
+                            <ul>
+                                <li>HVAC: Energy.gov contractor directory, ACCA member directory</li>
+                                <li>Plumbing: Plumbing-Heating-Cooling Contractors Association</li>
+                                <li>Electrical: National Electrical Contractors Association (NECA)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Your website</strong> (footer, contact page, about page)</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-info" style="margin-top: 15px;">
+                    <h4>📡 Data Aggregators (Distribute to Hundreds of Sites)</h4>
+                    <p>Instead of manually submitting to dozens of directories, use data aggregators that automatically distribute your NAP:</p>
+                    <ul style="margin: 10px 0 0 0;">
+                        <li><strong>Data Axle</strong> (formerly Infogroup) - ~$30/year</li>
+                        <li><strong>Neustar Localeze</strong> - ~$30/year</li>
+                        <li><strong>Foursquare</strong> - Free to claim</li>
+                    </ul>
+                    <p style="margin-top: 10px; font-size: 0.9em;"><em>These aggregators push your business info to hundreds of smaller directories automatically, saving significant time.</em></p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Pro Tip: Use Citation Management Tools</h4>
+                    <p>Manual citation building is tedious. Consider using:</p>
+                    <ul>
+                        <li><strong>Moz Local</strong> ($14-$33/month) - Syncs NAP to major aggregators and directories</li>
+                        <li><strong>BrightLocal</strong> ($29-$59/month) - Citation building + monitoring + rank tracking</li>
+                        <li><strong>Yext</strong> ($$$ enterprise) - Premium option for large businesses</li>
+                        <li><strong>Semrush Listing Management</strong> ($20+/month) - Part of Semrush suite</li>
+                    </ul>
+                    <p>Or hire a local SEO agency to do a one-time citation cleanup.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 9: INSIGHTS & TRACKING -->
+            <section id="insights">
+                <h2>9. 📈 Performance Tracking</h2>
+                <p><strong>Impact:</strong> What gets measured gets improved. Track your GBP performance to optimize strategy.</p>
+
+                <div class="alert alert-info" style="margin-bottom: 20px;">
+                    <strong>📊 2023 Dashboard Change:</strong> Google renamed "Insights" to "Performance" in February 2023. Some older metrics (Photo Views, Discovery vs Direct breakdown) were removed. The current Performance tab provides more accurate unique visitor tracking.
+                </div>
+
+                <div class="priority-high">
+                    <h4>⚠️ HIGH PRIORITY: Monitor These Metrics Monthly</h4>
+                    <p>Access via Google Business Profile → <strong>Performance</strong> tab:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>What It Measures</th>
+                                <th>Goal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Total Views</strong></td>
+                                <td>Unique visitors who viewed your profile (Search + Maps)</td>
+                                <td>Increase month-over-month</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Search Queries</strong></td>
+                                <td>Keywords that triggered your profile to appear</td>
+                                <td>Monitor top keywords; use third-party tools for full data*</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Platform Breakdown</strong></td>
+                                <td>Views from Google Search vs Maps, Desktop vs Mobile</td>
+                                <td>Understand where customers find you</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Website Clicks</strong></td>
+                                <td>Clicks on your website link</td>
+                                <td>Increase click-through rate</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Direction Requests</strong></td>
+                                <td>How many people asked for directions to your location</td>
+                                <td>Track seasonal trends (higher in summer for HVAC)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phone Calls</strong></td>
+                                <td>Mobile click-to-call button taps only**</td>
+                                <td>Key conversion metric (combine with call tracking)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Messages</strong></td>
+                                <td>WhatsApp/messaging conversations initiated</td>
+                                <td>Track response rate and response time</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bookings</strong></td>
+                                <td>Completed bookings (requires Google booking provider)</td>
+                                <td>Compare booking clicks vs completions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Review Count & Rating</strong></td>
+                                <td>Total reviews + average star rating</td>
+                                <td>5-10 new reviews/month, 4.5+ stars</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size: 0.9em; margin-top: 10px;">
+                        <em>*Low-volume search queries (11-100 impressions) no longer appear in GBP reports. Use rank tracking tools for comprehensive keyword data.</em><br>
+                        <em>**Phone Calls metric only counts mobile users who tap the call button. Desktop users who manually dial are NOT tracked. Consider using call tracking numbers for complete data.</em>
+                    </p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Pro Tip: Set Up Google Analytics UTM Tracking</h4>
+                    <p>Add UTM parameters to your GBP website URL to track traffic in Google Analytics:</p>
+                    <div class="example-box">
+                        <strong>Example:</strong><br>
+                        https://yourwebsite.com?utm_source=google&utm_medium=organic&utm_campaign=gbp
+                    </div>
+                    <p>This helps you see exactly how much website traffic and conversions come from your Google Business Profile.</p>
+                </div>
+
+                <div class="priority-medium">
+                    <h4>📋 MEDIUM PRIORITY: Competitor Benchmarking</h4>
+                    <p>Compare your profile to competitors manually (GBP no longer provides competitor comparisons):</p>
+                    <ul class="checklist">
+                        <li>Search your main service keyword (e.g., "HVAC repair Dallas")</li>
+                        <li>Note top 3 competitors in map pack</li>
+                        <li>Check their review count and average rating</li>
+                        <li>Count their photos and note quality/types</li>
+                        <li>Review their posts frequency and content</li>
+                        <li>Set goals to match or exceed their metrics</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Third-party tools for competitive analysis:</strong> BrightLocal, Whitespark, Local Falcon, Semrush</p>
+                </div>
+
+                <div class="tip-box" style="margin-top: 20px;">
+                    <h4>💡 New in 2025: Search Journeys</h4>
+                    <p>Google's updated analytics now includes <strong>Search Journeys</strong> - showing how users engage with your listing over time, including clicks, reviews read, and route requests. This helps identify where you may be losing potential customers in their decision-making process.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 10: 30-DAY ACTION PLAN -->
+            <section id="action-plan">
+                <h2>10. 🎯 30-Day GBP Optimization Action Plan</h2>
+                <p>Follow this roadmap to transform your Google Business Profile in one month:</p>
+
+                <h3>Week 1: Foundation & Audit</h3>
+                <div class="priority-critical">
+                    <h4>Days 1-3: Profile Completeness</h4>
+                    <ul class="checklist">
+                        <li>Claim or verify ownership of your GBP listing</li>
+                        <li>Complete all basic info fields (name, address, phone, website, hours)</li>
+                        <li>Add primary + 4-5 additional categories (5-6 total maximum)</li>
+                        <li>Set service area (cities/zip codes)</li>
+                        <li>Add all applicable attributes</li>
+                        <li>Upload logo and cover photo</li>
+                    </ul>
+                </div>
+
+                <div class="priority-high">
+                    <h4>Days 4-7: Description & Photos</h4>
+                    <ul class="checklist">
+                        <li>Write compelling 750-character business description</li>
+                        <li>Upload 20-30 high-quality photos (team, vehicles, work)</li>
+                        <li>Add photo captions</li>
+                        <li>Create/upload 1-2 short videos</li>
+                    </ul>
+                </div>
+
+                <h3>Week 2: Services & Website FAQ</h3>
+                <div class="priority-critical">
+                    <h4>Days 8-10: Services Menu</h4>
+                    <ul class="checklist">
+                        <li>Add 5-10 core services with descriptions (300 chars max each)</li>
+                        <li>Keep service names under 58 characters</li>
+                        <li>Use Google's auto-suggested services when available</li>
+                        <li>Include "starting at" pricing for transparency</li>
+                    </ul>
+                </div>
+
+                <div class="priority-high">
+                    <h4>Days 11-14: Website FAQ Schema</h4>
+                    <p style="margin-bottom: 10px;"><em>Note: GBP Q&A was discontinued in December 2025. Implement FAQ on your website instead:</em></p>
+                    <ul class="checklist">
+                        <li>Create FAQ page on your website with 10-15 common questions</li>
+                        <li>Add FAQPage Schema markup to the page</li>
+                        <li>Test with Google Rich Results Test tool</li>
+                        <li>Link to FAQ page from your GBP website URL or posts</li>
+                    </ul>
+                </div>
+
+                <h3>Week 3: Reviews & Posts</h3>
+                <div class="priority-critical">
+                    <h4>Days 15-18: Review Generation</h4>
+                    <ul class="checklist">
+                        <li>Get your direct review link</li>
+                        <li>Add review link to email signature</li>
+                        <li>Print review link on invoices/receipts</li>
+                        <li>Train team to ask for reviews after every job</li>
+                        <li>Send review request texts/emails to recent customers</li>
+                        <li>Respond to all existing reviews</li>
+                    </ul>
+                </div>
+
+                <div class="priority-high">
+                    <h4>Days 19-21: First Week of Posts</h4>
+                    <ul class="checklist">
+                        <li>Create and publish 2-3 Google Posts (offer, update, what's new)</li>
+                        <li>Plan content calendar for next 30 days</li>
+                        <li>Schedule posts in advance</li>
+                    </ul>
+                </div>
+
+                <h3>Week 4: Citations & Optimization</h3>
+                <div class="priority-high">
+                    <h4>Days 22-25: NAP Audit & Cleanup</h4>
+                    <ul class="checklist">
+                        <li>Google your business name + city</li>
+                        <li>Check NAP consistency on top 20 results</li>
+                        <li>Correct any inconsistencies</li>
+                        <li>Claim listings on Yelp, Facebook, Bing, Apple Maps</li>
+                        <li>Submit to industry directories</li>
+                    </ul>
+                </div>
+
+                <div class="priority-medium">
+                    <h4>Days 26-30: Tracking & Refinement</h4>
+                    <ul class="checklist">
+                        <li>Set up Google Analytics UTM tracking</li>
+                        <li>Review Performance tab metrics (views, calls, clicks, directions)</li>
+                        <li>Benchmark against competitors manually</li>
+                        <li>Add 10-20 more photos</li>
+                        <li>Continue posting 1-2x/week</li>
+                        <li>Continue asking for reviews</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 11: COMMON MISTAKES -->
+            <section id="mistakes">
+                <h2>11. 🚫 Common Mistakes to Avoid</h2>
+
+                <div class="alert alert-danger">
+                    <h4>❌ Critical Mistakes That Hurt Your Ranking</h4>
+                    <ol>
+                        <li><strong>Keyword Stuffing in Business Name</strong>
+                            <ul>
+                                <li>❌ WRONG: "ABC Plumbing | Emergency Plumber Dallas | 24/7 Plumbing Service"</li>
+                                <li>✅ RIGHT: "ABC Plumbing"</li>
+                                <li>Google will penalize or suspend profiles with keyword-stuffed names.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Creating Multiple Listings for Same Location</strong>
+                            <ul>
+                                <li>Don't create separate GBPs for different services at the same address</li>
+                                <li>Exception: Separate physical locations in different cities = separate GBPs</li>
+                            </ul>
+                        </li>
+                        <li><strong>Using Virtual Office/PO Box Address</strong>
+                            <ul>
+                                <li>Google requires real business address or service area only</li>
+                                <li>UPS Store, Regus, virtual offices will get your listing suspended</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ignoring Negative Reviews</strong>
+                            <ul>
+                                <li>Not responding makes you look bad to potential customers</li>
+                                <li>Always respond professionally within 24-48 hours of receiving</li>
+                                <li><em>Note: Responses now go through Google moderation (10 min to 30 days delay before appearing)</em></li>
+                            </ul>
+                        </li>
+                        <li><strong>Inconsistent NAP Information</strong>
+                            <ul>
+                                <li>Different phone numbers, abbreviations, suite numbers across web</li>
+                                <li>Confuses Google and dilutes ranking signals</li>
+                            </ul>
+                        </li>
+                        <li><strong>Never Posting or Updating</strong>
+                            <ul>
+                                <li>Stale profiles signal inactive business</li>
+                                <li>Post at least 1x per week to stay active</li>
+                            </ul>
+                        </li>
+                        <li><strong>No Photos or Using Stock Images</strong>
+                            <ul>
+                                <li>Google favors profiles with many real photos</li>
+                                <li>Stock photos can get flagged and removed</li>
+                            </ul>
+                        </li>
+                        <li><strong>Setting Wrong Primary Category</strong>
+                            <ul>
+                                <li>Using generic category (Contractor, Home Services) instead of specific (HVAC Contractor, Plumber, Electrician)</li>
+                                <li>Primary category is #1 ranking factor - choose wisely</li>
+                            </ul>
+                        </li>
+                        <li><strong>Adding Too Many Categories</strong>
+                            <ul>
+                                <li>Google allows up to 10 categories, but more isn't better</li>
+                                <li>Best practice: 5-6 total categories maximum</li>
+                                <li>Irrelevant categories can dilute your ranking signals</li>
+                            </ul>
+                        </li>
+                        <li><strong>Not Verifying Your Profile</strong>
+                            <ul>
+                                <li>Unverified profiles are nearly invisible in search results</li>
+                                <li>Complete verification via postcard, phone, or video as soon as possible</li>
+                                <li>An unverified profile won't appear in the local pack</li>
+                            </ul>
+                        </li>
+                        <li><strong>Not Using Products & Services Features</strong>
+                            <ul>
+                                <li>Missing out on intent-based searches ("AC repair near me")</li>
+                                <li>Add 5-10 core services with descriptions and pricing</li>
+                                <li>These features directly impact what searches you appear for</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- SECTION 12: ADVANCED TIPS -->
+            <section id="advanced">
+                <h2>12. 🚀 Advanced Optimization Tips</h2>
+
+                <h3>Google AI Mode & Search (NEW 2025)</h3>
+                <div class="priority-high">
+                    <h4>How AI Changes Local Search</h4>
+                    <p>Google's AI Mode (powered by Gemini) now creates conversational, context-driven responses directly from your Business Profile:</p>
+                    <ul class="checklist">
+                        <li><strong>"Ask about this place":</strong> Customers can type questions and get AI-generated answers from your profile data, reviews, and photos</li>
+                        <li><strong>Profile completeness matters more:</strong> AI pulls from ALL your profile data - incomplete profiles get incomplete AI answers</li>
+                        <li><strong>Reviews feed AI responses:</strong> What customers say in reviews directly influences AI-generated answers</li>
+                        <li><strong>Photos are analyzed:</strong> Google's AI interprets images to answer visual questions ("Do they have a waiting area?")</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Action:</strong> Keep your profile, services, and photos comprehensive - they now directly feed AI responses to potential customers.</p>
+                </div>
+
+                <h3>Multi-Location Businesses</h3>
+                <div class="priority-medium">
+                    <h4>Managing Multiple GBP Listings</h4>
+                    <p>If you have multiple physical locations:</p>
+                    <ul class="checklist">
+                        <li>Create separate GBP for each location (different address required)</li>
+                        <li>Use consistent naming: "ABC HVAC - Dallas", "ABC HVAC - Fort Worth"</li>
+                        <li>Customize each listing (photos, posts, reviews from that location)</li>
+                        <li>Use unique phone numbers for call tracking</li>
+                        <li>Build location-specific citations</li>
+                        <li><strong>Use Location Groups (10+ locations):</strong> Google's official tool for managing multiple profiles from one dashboard</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Management Structure:</strong> Corporate retains "Owner" access for core data (name, address, category). Local managers get "Manager" access for engagement (reviews, photos, posts).</p>
+                </div>
+
+                <h3>Seasonal Optimization</h3>
+                <div class="tip-box">
+                    <h4>💡 Adjust Strategy by Season</h4>
+                    <p><strong>HVAC Example:</strong></p>
+                    <ul>
+                        <li><strong>Spring (March-May):</strong> Focus on AC tune-up posts, add "AC Installation" service prominently</li>
+                        <li><strong>Summer (June-Aug):</strong> Highlight emergency AC repair, same-day service</li>
+                        <li><strong>Fall (Sept-Nov):</strong> Promote furnace check-ups, heating system posts</li>
+                        <li><strong>Winter (Dec-Feb):</strong> Emergency heating repair, furnace installation</li>
+                    </ul>
+                    <p>Update photos seasonally (show relevant work) and adjust service menu order.</p>
+                </div>
+
+                <h3>Google Verified / Local Services Ads</h3>
+                <div class="priority-medium">
+                    <h4>Get the Blue Checkmark (Google Verified)</h4>
+                    <p>Google Verified badge (formerly "Google Guaranteed") appears next to your business in search results:</p>
+                    <ul class="checklist">
+                        <li>Requires background check and insurance verification (min $200K coverage)<sup><a href="#ref-3">[3]</a></sup></li>
+                        <li>Available for HVAC, plumbing, electrical, and many service trades</li>
+                        <li>Costs: Pay-per-lead ($25-85/lead for home services) + ~$50/month subscription</li>
+                        <li>Benefits: Huge trust signal, appears at very top of search results</li>
+                        <li>Apply: <a href="https://ads.google.com/local-services-ads" target="_blank">ads.google.com/local-services-ads</a></li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>See <a href="#lsa-integration">Section 7a</a> for complete LSA setup guide and requirements.</em></p>
+                    <p style="margin-top: 5px; color: #92400e;"><strong>Note:</strong> As of Oct 2025, the $2,000 money-back guarantee has been discontinued. Reviews are now the primary trust signal.</p>
+                </div>
+
+                <h3>Communication Channels</h3>
+                <div class="alert alert-warning" style="margin-bottom: 15px;">
+                    <strong>⚠️ UPDATE (July 2024):</strong> Google Business Messages has been <strong>discontinued</strong>. The chat feature, call history, and quote requests were all removed July 31, 2024. The "responsive" badge no longer exists.
+                </div>
+                <div class="priority-high">
+                    <h4>Alternative Communication Options</h4>
+                    <ul class="checklist">
+                        <li><strong>WhatsApp Integration (NEW 2025):</strong> Connect your GBP to WhatsApp for direct messaging</li>
+                        <li><strong>Phone calls:</strong> Primary contact method - ensure number is always answered</li>
+                        <li><strong>Website contact forms:</strong> Capture leads 24/7</li>
+                        <li><strong>Reserve with Google:</strong> Enable booking buttons for scheduling</li>
+                    </ul>
+                </div>
+
+                <h3>Booking Integration</h3>
+                <div class="priority-medium">
+                    <h4>Add "Book Appointment" Button</h4>
+                    <p>If you use scheduling software (ServiceTitan, Housecall Pro, Jobber, etc.), integrate it:</p>
+                    <ul class="checklist">
+                        <li>Adds "Book" button directly on GBP</li>
+                        <li>Customers can schedule without calling</li>
+                        <li>Syncs with your calendar automatically</li>
+                        <li>Reduces friction, increases conversions</li>
+                    </ul>
+                </div>
+
+                <h3>Emerging Features (2025-2026)</h3>
+                <div class="tip-box">
+                    <h4>💡 Features to Watch</h4>
+                    <ul>
+                        <li><strong>AR Store Tours:</strong> Augmented reality virtual tours of business spaces - useful if you have a showroom or customer-facing office</li>
+                        <li><strong>Visual Search:</strong> Google's AI now interprets photos to match search intent - high-quality, authentic images directly influence rankings</li>
+                        <li><strong>AI-Driven Review Analytics:</strong> Dashboard highlights what customers love most and where improvements are needed</li>
+                        <li><strong>Enhanced Performance Metrics:</strong> "Search Journeys" shows how users engage with your listing over time</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><em>These features are rolling out gradually. Check your GBP dashboard regularly for new options.</em></p>
+                </div>
+            </section>
+
+            <!-- SECTION 13: RESOURCES -->
+            <section id="resources">
+                <h2>13. 📚 Resources & Tools</h2>
+
+                <h3>Free Tools</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Purpose</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Google Business Profile Manager</strong></td>
+                            <td>Manage your profile</td>
+                            <td>business.google.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Review Link Generator</strong></td>
+                            <td>Get short review link</td>
+                            <td>whitespark.ca/google-review-link-generator</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BrightLocal Citation Tracker</strong></td>
+                            <td>Find citation opportunities (free trial)</td>
+                            <td>brightlocal.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Analytics</strong></td>
+                            <td>Track website traffic from GBP</td>
+                            <td>analytics.google.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Canva</strong></td>
+                            <td>Create post graphics</td>
+                            <td>canva.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Paid Tools (Optional but Helpful)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Purpose</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Moz Local</strong></td>
+                            <td>Citation management via aggregators</td>
+                            <td>$14-33/month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BrightLocal</strong></td>
+                            <td>Citation building + tracking + rank monitoring</td>
+                            <td>$29-59/month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reputation.com</strong></td>
+                            <td>Review management</td>
+                            <td>$199+/month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GatherUp</strong></td>
+                            <td>Review generation + monitoring</td>
+                            <td>$99+/month</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Podium</strong></td>
+                            <td>Review + messaging platform</td>
+                            <td>$289+/month</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Learning Resources</h3>
+                <ul>
+                    <li><strong>Google Business Profile Help Center:</strong> support.google.com/business</li>
+                    <li><strong>Google's Local Search Ranking Factors:</strong> Search "Whitespark Local Search Ranking Factors"</li>
+                    <li><strong>Sterling Sky (GBP Experts):</strong> Follow on Twitter @sterlingsky for tips</li>
+                    <li><strong>Local Search Forum:</strong> localsearchforum.com</li>
+                </ul>
+            </section>
+
+            <!-- FINAL CHECKLIST -->
+            <section id="final-checklist">
+                <h2>✅ Final Master Checklist</h2>
+                <p><strong>Use this as your ultimate GBP audit checklist:</strong></p>
+
+                <h3>Profile Basics</h3>
+                <ul class="checklist">
+                    <li>Business name is accurate (no keyword stuffing)</li>
+                    <li>Primary category is most specific option</li>
+                    <li>2-4 additional categories added (5-6 total recommended)</li>
+                    <li>Address is correct and consistent everywhere</li>
+                    <li>Phone number is local and tracked</li>
+                    <li>Website URL is correct</li>
+                    <li>Service area defined (cities/zip codes)</li>
+                    <li>Business hours accurate (including holidays)</li>
+                    <li>All applicable attributes enabled</li>
+                    <li>Business description is 750 characters, keyword-rich, compelling</li>
+                </ul>
+
+                <h3>Photos & Videos</h3>
+                <ul class="checklist">
+                    <li>Logo uploaded (square, high-res)</li>
+                    <li>Cover photo uploaded (landscape, professional)</li>
+                    <li>100+ total photos uploaded</li>
+                    <li>10+ team photos</li>
+                    <li>20+ work-in-progress photos</li>
+                    <li>10+ before/after photos</li>
+                    <li>10+ vehicle/fleet photos</li>
+                    <li>Photos have captions</li>
+                    <li>3-5 videos uploaded</li>
+                    <li>Adding 10-20 new photos per month</li>
+                </ul>
+
+                <h3>Services</h3>
+                <ul class="checklist">
+                    <li>10-15 individual services added</li>
+                    <li>Each service has description</li>
+                    <li>Pricing shown (starting at $X, range, or free estimate)</li>
+                    <li>Services ordered by popularity/importance</li>
+                </ul>
+
+                <h3>Reviews</h3>
+                <ul class="checklist">
+                    <li>50+ total reviews (minimum)</li>
+                    <li>4.5+ average star rating</li>
+                    <li>Getting 5-10 new reviews per month</li>
+                    <li>Review link is accessible (on website, invoices, signatures)</li>
+                    <li>All reviews responded to within 48 hours</li>
+                    <li>Negative reviews addressed professionally</li>
+                    <li>Team trained to ask for reviews</li>
+                </ul>
+
+                <h3>Posts & Updates</h3>
+                <ul class="checklist">
+                    <li>Posting 1-4 times per week</li>
+                    <li>Mix of post types (offers, updates, events, what's new)</li>
+                    <li>Posts include high-quality photos</li>
+                    <li>Clear call-to-action on each post</li>
+                    <li>Content calendar planned 30 days ahead</li>
+                </ul>
+
+                <h3>Website FAQ Schema (Replaces GBP Q&A)</h3>
+                <ul class="checklist">
+                    <li>FAQ page created on website with 10-15 questions</li>
+                    <li>FAQPage schema markup (JSON-LD) implemented</li>
+                    <li>Covers pricing, service area, licensing, availability</li>
+                    <li>Validated with Google Rich Results Test</li>
+                    <li>Page indexed in Google Search Console</li>
+                </ul>
+
+                <h3>Citations & Consistency</h3>
+                <ul class="checklist">
+                    <li>NAP is identical across all platforms</li>
+                    <li>Listed on Yelp, Facebook, Bing, Apple Maps</li>
+                    <li>Listed on BBB, HomeAdvisor, Angie's List</li>
+                    <li>Listed in industry directories</li>
+                    <li>Website footer/contact page matches GBP exactly</li>
+                </ul>
+
+                <h3>Tracking & Optimization</h3>
+                <ul class="checklist">
+                    <li>Google Analytics UTM tracking set up</li>
+                    <li>Reviewing Insights monthly</li>
+                    <li>Benchmarking against competitors</li>
+                    <li>Call tracking enabled</li>
+                    <li>Testing and refining strategy monthly</li>
+                </ul>
+
+                <h3>Advanced Features</h3>
+                <ul class="checklist">
+                    <li>WhatsApp integration connected (replacement for discontinued messaging)</li>
+                    <li>Booking integration added (if applicable)</li>
+                    <li>Google Verified badge obtained (if eligible)</li>
+                    <li>Local Services Ads running (if applicable)</li>
+                    <li>Profile Completion Score at 100%</li>
+                </ul>
+            </section>
+
+            <!-- REFERENCES SECTION -->
+            <section id="references" style="background: #f8f9fa; padding: 30px; border-radius: 8px; margin-top: 40px;">
+                <h2 style="border-bottom: 2px solid #6b7280; color: #374151;">📚 References & Sources</h2>
+                <p style="color: #6b7280; margin-bottom: 20px;">This guide cites official Google documentation and verified industry sources for accuracy.</p>
+
+                <div style="font-size: 0.95em;">
+                    <p id="ref-1" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[1]</strong> Google Local Services Ads Help - "About Local Services Ads"<br>
+                        <a href="https://support.google.com/localservices/answer/6224841" target="_blank" style="color: #1e40af;">support.google.com/localservices/answer/6224841</a>
+                    </p>
+
+                    <p id="ref-2" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[2]</strong> WordStream - "Google Ads Benchmarks 2025" (Average cost-per-lead across industries)<br>
+                        <a href="https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks" target="_blank" style="color: #1e40af;">wordstream.com/blog/google-adwords-industry-benchmarks</a>
+                    </p>
+
+                    <p id="ref-3" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[3]</strong> Bunker Insurance - "Google Guaranteed Insurance Requirements"<br>
+                        <a href="https://buildbunker.com/2020/05/20/google-guaranteed-insurance-requirements-google-local-services-ads/" target="_blank" style="color: #1e40af;">buildbunker.com/google-guaranteed-insurance-requirements</a>
+                    </p>
+
+                    <p id="ref-4" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[4]</strong> Google Local Services Help - "Background check requirements"<br>
+                        <a href="https://support.google.com/localservices/answer/6226575" target="_blank" style="color: #1e40af;">support.google.com/localservices/answer/6226575</a>
+                    </p>
+
+                    <p id="ref-5" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[5]</strong> Google Local Services Help - "Review requirements for Local Services Ads"<br>
+                        <a href="https://support.google.com/localservices/answer/7496631" target="_blank" style="color: #1e40af;">support.google.com/localservices/answer/7496631</a>
+                    </p>
+
+                    <p id="ref-6" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[6]</strong> The Media Captain - "Google Local Service Ad Statistics 2026"<br>
+                        <a href="https://www.themediacaptain.com/google-local-service-ad-statistics/" target="_blank" style="color: #1e40af;">themediacaptain.com/google-local-service-ad-statistics</a>
+                    </p>
+
+                    <p id="ref-7" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[7]</strong> Google Local Services Help - "About Google Verified badge" (Replaced Google Guarantee Oct 2025)<br>
+                        <a href="https://support.google.com/localservices/answer/16498018" target="_blank" style="color: #1e40af;">support.google.com/localservices/answer/16498018</a>
+                    </p>
+
+                    <p id="ref-8" style="margin: 15px 0; padding-left: 20px; border-left: 3px solid #1e40af;">
+                        <strong>[8]</strong> Google Business Profile Community - "Upcoming Changes to LSA Google Guarantee Badges"<br>
+                        <a href="https://support.google.com/business/community-guide/366556199" target="_blank" style="color: #1e40af;">support.google.com/business/community-guide/366556199</a>
+                    </p>
+                </div>
+
+                <div class="alert alert-warning" style="margin-top: 25px;">
+                    <strong>📅 Note:</strong> LSA costs and requirements change frequently. Always verify current requirements at <a href="https://ads.google.com/local-services-ads" target="_blank">ads.google.com/local-services-ads</a> before applying. Last verified: February 2026 (updated for Google Verified badge change).
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <p><strong>Master Google Business Profile Optimization Guide</strong></p>
+            <p>For HVAC, Plumbing & Electrical Contractors</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">Created by B3X Technical Services | Breakthrough3x Marketing Program</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Last Updated: February 3, 2026 (Google Verified badge update + major corrections)</p>
+        </footer>
+    </div>
+    </div> <!-- End page-wrapper -->
+
+    <script>
+        // Toggle sidebar on mobile
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            const toggleIcon = document.getElementById('toggle-icon');
+
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+            toggleIcon.textContent = sidebar.classList.contains('open') ? '✕' : '☰';
+        }
+
+        // Close sidebar when clicking a link (mobile)
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1200) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.sidebar-nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active section highlighting and progress bar
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.sidebar-nav a.nav-link');
+
+        function updateActiveSection() {
+            const scrollPos = window.scrollY + 100;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (window.scrollY / docHeight) * 100;
+
+            // Update progress bar
+            document.getElementById('progress-fill').style.width = scrollPercent + '%';
+
+            // Find active section
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            // Update active link
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Throttle scroll events for performance
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateActiveSection();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Initial call
+        updateActiveSection();
+
+        // Handle escape key to close sidebar
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar.classList.contains('open')) {
+                    toggleSidebar();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
