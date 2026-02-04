@@ -143,34 +143,30 @@ All 5 locations using local area codes — **this is correct for local SEO**.
 
 ---
 
-### ~~Issue #3: Q&A Section~~ ❌ REMOVED - FEATURE DISCONTINUED
+### Issue #3: Website FAQ Strategy
 
-> **IMPORTANT UPDATE (December 2025):** Google discontinued the Q&A feature on Google Business Profiles. The "Seed 10 Q&A pairs" recommendation from our previous audit is no longer applicable.
+Google's AI ("Ask Maps" powered by Gemini) now answers customer questions by pulling from your website content, especially FAQ pages.
 
-**Replacement Strategy: Website FAQ with Schema Markup**
+**✅ COMPLETED:** Empower has a comprehensive FAQ page at [empoweryourhome.com/faqs](https://empoweryourhome.com/faqs) with **37 questions** covering Solar, HVAC, Electrical, Roofing, and Battery systems. FAQPage schema markup is implemented on the home page.
 
-Google's AI ("Ask Maps" powered by Gemini) now answers customer questions by pulling from:
-- Your business description
-- Your website content (especially FAQ pages)
-- Your reviews and photos
+**Recommended Improvements:**
 
-**New Action Required:**
+1. **Add /faqs to main navigation**
+   - Currently the FAQ page is not discoverable from the main menu
+   - Recommend adding under "Company" or creating a "Resources" dropdown
+   - Improves user experience and signals content importance to Google
 
-1. **Create FAQ page on empoweryourhome.com** with these 10 questions:
-   - Do you offer free consultations?
-   - What areas do you service?
-   - Are you licensed and insured?
-   - What financing options are available?
-   - How long does solar installation take?
-   - What tax credits are available?
-   - What solar panel brands do you install?
-   - Do you offer 24/7 emergency HVAC service?
-   - Can you install EV chargers?
-   - Do you offer HVAC maintenance plans?
+2. **Add these high-value conversion questions:**
+   - "Are you licensed and insured?" (builds trust — not currently covered)
+   - "Do you offer free consultations?" (lead generation — not currently covered)
+   - "Do you offer 24/7 emergency HVAC service?" (differentiator)
+   - "Can you install EV chargers?" (growing demand — mentioned in services but no FAQ)
+   - "Do you offer HVAC maintenance plans?" (recurring revenue opportunity)
 
-2. **Add FAQPage schema markup** (JSON-LD) to the FAQ page
-
-3. **Validate with Google Rich Results Test**
+3. **Expand FAQPage schema markup**
+   - Currently only 12 of 37 questions are in the schema
+   - Include more questions in JSON-LD to maximize AI visibility
+   - Validate with [Google Rich Results Test](https://search.google.com/test/rich-results)
 
 > **Note:** FAQ rich results (expandable dropdowns in search) are now limited to government and health websites. However, FAQ schema still helps AI visibility — pages with FAQ markup are 3.2x more likely to appear in Google AI Overviews.
 
@@ -445,12 +441,13 @@ Google's AI extracts and displays "Review Highlights" (themes like "fast service
 | 11-12 | Add/update 5-10 core services (58/300 char limits) | All | 1 hr |
 | 13-14 | Create 2 Google Posts | All | 30 min |
 
-### Week 3: Website FAQ & Systems (Days 15-21)
+### Week 3: FAQ Optimization & Systems (Days 15-21)
 
 | Day | Task | Notes |
 |-----|------|-------|
-| 15-17 | Create FAQ page on empoweryourhome.com | 10 questions |
-| 18-19 | Add FAQPage schema markup | JSON-LD |
+| 15-17 | Add /faqs link to main navigation | Under "Company" or "Resources" |
+| 17-18 | Add missing FAQ questions | License/insurance, free consultations, 24/7 service |
+| 18-19 | Expand FAQPage schema (12→20+ questions) | JSON-LD |
 | 20-21 | Set up review request automation | Focus on Phoenix |
 
 ### Week 4: Optimization & Monitoring (Days 22-30)
