@@ -65,26 +65,27 @@ Phoenix rating dropped from **4.2 → 4.0** with visible negative reviews about 
 **Current State:**
 - Rating: 4.0/5 (29 reviews) — **LOWEST of all locations**
 - Visible 1-star reviews on profile
-- Recent negative reviews cite:
-  - "The worse company ever DONOT do business with them"
-  - "All they care about is selling and never come back to address installation issues"
-  - Battery performance complaints
+
+> ✅ **Review Response:** Empower IS actively responding to both positive and negative reviews within days. This is excellent practice — continue this.
+
+**Root Cause Analysis — Recurring Themes in Negative Reviews:**
+- **Installation delays:** Multiple reviews cite 4-6 month waits for battery installations
+- **Inspection failures:** Systems not passing inspection on first attempt
+- **Communication gaps:** Customers report unreturned calls and lack of status updates
+- **Post-sale follow-through:** Sales process strong, but delivery/completion lags
 
 **Impact:**
 - Sub-4.5 rating significantly reduces Local Pack visibility
 - Negative reviews prominently displayed in Knowledge Panel
-- Phoenix is a competitive market — poor rating = lost leads
+- Phoenix is a competitive solar market — poor rating = lost leads
 
-**Immediate Actions:**
-1. **Respond to ALL negative reviews** within 24-48 hours (professional, non-defensive)
-2. **Contact dissatisfied customers** directly to resolve issues
-3. **Implement review request system** for satisfied Phoenix customers
-4. **Target:** 20+ new positive reviews in next 60 days to reach 4.3+
+**Recommended Actions:**
+1. **Operational Fix:** Address installation backlog and timeline management in Phoenix market
+2. **Proactive Communication:** Implement automated status updates (weekly) for pending installations
+3. **Quality Control:** Pre-inspection checklist to reduce inspection failure rate
+4. **Review Volume Strategy:** Request reviews from satisfied Phoenix customers — target 30+ new reviews in 60 days
 
-**Review Response Template (Negative):**
-```
-Thank you for sharing your experience, [Name]. We're sorry to hear about your concerns with [specific issue]. This doesn't reflect the service standards we strive for. Please contact our customer care team at [phone] so we can address this directly and make things right. — [Name], Empower Home Services
-```
+> **Note:** Review responses are already being handled well. The priority is resolving the underlying operational issues generating the negative reviews.
 
 ---
 
@@ -348,15 +349,19 @@ Google allows reviewers to use nicknames and alternate photos. You may not recog
 - Pay-per-lead model unchanged
 - Appears above organic results
 
-**Updated LSA Cost Estimates (2026):**
-| Service | Cost Per Lead |
-|---------|---------------|
-| HVAC | $45-85 |
-| Plumbing | $40-75 |
-| Electrical | $35-70 |
-| Solar | $50-100+ |
+**LSA Cost Per Lead - Actual Performance Data (January 2026):**
 
-*Costs vary by market and season. HVAC peaks in summer (AC) and winter (heating).*
+| Market | Service Type | LSA Leads | Cost Per Lead |
+|--------|--------------|-----------|---------------|
+| Midwest (Rural) | HVAC/Plumbing | 170 | **$50.43** |
+| Midwest (Suburban) | HVAC | 15 | $79.00* |
+| Southeast | Plumbing | 22 | $162.57* |
+| Southwest | Electrical | 6 | $176.20* |
+| **California (Central Valley)** | HVAC/Roofing | — | $129.60* |
+
+*\* Blended cost across all channels. High-volume Midwest campaign shows pure LSA cost of $50.43/lead.*
+
+> **Key Insight:** LSA costs vary significantly by market competition. California markets typically run 2-3x higher than rural Midwest. High-volume campaigns (170+ leads/month) achieve better rates through volume.
 
 ---
 
@@ -428,8 +433,8 @@ Google's AI extracts and displays "Review Highlights" (themes like "fast service
 
 | Day | Task | Location | Time |
 |-----|------|----------|------|
-| 1-2 | Respond to ALL Phoenix negative reviews | Phoenix | 2 hrs |
-| 1-2 | Audit recent Clovis reviews for patterns | Clovis | 1 hr |
+| 1-2 | Audit Phoenix installation backlog & create resolution plan | Phoenix | 2 hrs |
+| 1-2 | Review recent Clovis reviews for patterns | Clovis | 1 hr |
 | 3-4 | Reduce categories from 9 → 5 (all locations) | All | 30 min |
 | 5-7 | Verify/update business descriptions | All | 1 hr |
 
