@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBP Optimization Audit - Echelon Services | February 2026 Update</title>
+    <style>
+:root {
+  --primary: #1a1a2e;
+  --accent: #1e40af;
+  --accent-light: #3b82f6;
+  --accent2: #0f3460;
+  --bg: #f8f9fc;
+  --card: #ffffff;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --green: #38a169;
+  --red: #e53e3e;
+  --orange: #dd6b20;
+  --blue: #3182ce;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ===== HEADER ===== */
+.report-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #1e3a5f 50%, #1e40af 100%);
+  color: white;
+  padding: 60px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+.report-header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(30, 64, 175, 0.1);
+}
+.header-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 1;
+}
+.header-badge {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.report-header h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.report-header .subtitle {
+  font-size: 1.15em;
+  color: rgba(255,255,255,0.75);
+  max-width: 700px;
+}
+.header-meta {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  color: rgba(255,255,255,0.6);
+}
+.header-meta span { display: flex; align-items: center; gap: 6px; }
+.header-meta strong { color: rgba(255,255,255,0.9); }
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* ===== EXECUTIVE SUMMARY ===== */
+.exec-summary {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 40px;
+  margin: -30px auto 40px;
+  max-width: 960px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 2;
+}
+.exec-summary h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.key-findings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+.finding {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+}
+.finding.positive { border-left-color: var(--green); }
+.finding.negative { border-left-color: var(--red); }
+.finding.warn { border-left-color: var(--orange); }
+.finding .icon { font-size: 1.3em; flex-shrink: 0; }
+.finding .text { font-size: 0.92em; }
+.finding .text strong { display: block; margin-bottom: 2px; }
+
+/* ===== BOTTOM LINE BOX ===== */
+.bottom-line {
+  background: linear-gradient(135deg, #1a1a2e, #1e3a5f);
+  color: white;
+  padding: 24px 28px;
+  border-radius: 10px;
+  margin-top: 28px;
+  font-size: 1.05em;
+}
+.bottom-line strong { color: #93c5fd; }
+
+/* ===== SECTIONS ===== */
+.section {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 28px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+}
+.section h2 {
+  font-size: 1.5em;
+  color: var(--primary);
+  margin-bottom: 6px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--border);
+}
+.section h3 {
+  font-size: 1.15em;
+  color: var(--accent2);
+  margin: 28px 0 14px;
+}
+.section h3:first-of-type { margin-top: 20px; }
+.section h4 {
+  font-size: 1em;
+  color: var(--text);
+  margin: 20px 0 10px;
+}
+
+/* ===== LISTS ===== */
+.check-list { list-style: none; padding: 0; }
+.check-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.check-list li:last-child { border-bottom: none; }
+.check-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.check-list li.good::before { background: var(--green); }
+.check-list li.bad::before { background: var(--red); }
+.check-list li.warn::before { background: var(--orange); }
+
+/* ===== STATUS BADGES ===== */
+.status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.78em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.status.critical { background: #fed7d7; color: #c53030; }
+.status.warning { background: #fefcbf; color: #b7791f; }
+.status.good { background: #c6f6d5; color: #276749; }
+.status.info { background: #bee3f8; color: #2a69ac; }
+.status.new { background: #e9d8fd; color: #6b46c1; }
+
+/* ===== DATA TABLES ===== */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+}
+.data-table th {
+  background: var(--primary);
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+.data-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.data-table tr:nth-child(even) td { background: #f7fafc; }
+.data-table tr:hover td { background: #edf2f7; }
+.data-table .cell-bad { color: var(--red); font-weight: 600; }
+.data-table .cell-good { color: var(--green); font-weight: 600; }
+.data-table .cell-warn { color: var(--orange); font-weight: 600; }
+
+/* ===== STAT CARDS ===== */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+.stat-card {
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.stat-card .number {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: var(--accent2);
+  line-height: 1;
+}
+.stat-card .number.green { color: var(--green); }
+.stat-card .number.orange { color: var(--orange); }
+.stat-card .number.red { color: var(--red); }
+.stat-card .number.blue { color: var(--blue); }
+.stat-card .label {
+  font-size: 0.82em;
+  color: var(--text-light);
+  margin-top: 6px;
+}
+
+/* ===== TIER CARDS ===== */
+.tier {
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  margin: 24px 0;
+  overflow: hidden;
+}
+.tier-header {
+  padding: 16px 24px;
+  font-weight: 700;
+  font-size: 1.05em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tier-1 .tier-header { background: #fff5f5; color: #c53030; border-bottom: 2px solid #feb2b2; }
+.tier-2 .tier-header { background: #fffff0; color: #b7791f; border-bottom: 2px solid #fefcbf; }
+.tier-3 .tier-header { background: #ebf8ff; color: #2b6cb0; border-bottom: 2px solid #bee3f8; }
+.tier-body { padding: 24px; }
+.tier-body ol, .tier-body ul { padding-left: 20px; }
+.tier-body li { margin-bottom: 12px; line-height: 1.6; }
+.tier-body li strong { color: var(--primary); }
+.tier-body .detail {
+  margin-top: 4px;
+  font-size: 0.92em;
+  color: var(--text-light);
+  padding-left: 4px;
+}
+.tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.78em;
+  font-weight: 600;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.tag.quick { background: #c6f6d5; color: #276749; }
+.tag.effort { background: #fefcbf; color: #b7791f; }
+.tag.strategic { background: #bee3f8; color: #2a69ac; }
+.tag.critical { background: #fed7d7; color: #c53030; }
+
+/* ===== AI/DARK BOX ===== */
+.ai-box {
+  background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 28px;
+}
+.ai-box h2 { color: white; border-bottom-color: rgba(255,255,255,0.2); }
+.ai-box h3 { color: #93c5fd; }
+.ai-box p { color: rgba(255,255,255,0.85); }
+.ai-box .data-table tr:nth-child(even) td { background: rgba(255,255,255,0.04); }
+.ai-box .data-table tr:nth-child(odd) td { background: transparent; }
+.ai-box .data-table tr:hover td { background: rgba(255,255,255,0.08); }
+.ai-box .data-table td { border-bottom-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.85); }
+.ai-cite-list { list-style: none; padding: 0; }
+.ai-cite-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: rgba(255,255,255,0.85);
+}
+.ai-cite-list li:last-child { border-bottom: none; }
+.ai-cite-list .bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+/* ===== CALLOUT BOXES ===== */
+.callout {
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 20px 0;
+  font-size: 0.95em;
+}
+.callout.red { background: #fff5f5; border-left: 4px solid var(--red); }
+.callout.green { background: #f0fff4; border-left: 4px solid var(--green); }
+.callout.blue { background: #ebf8ff; border-left: 4px solid var(--blue); }
+.callout.orange { background: #fffaf0; border-left: 4px solid var(--orange); }
+.callout.purple { background: #faf5ff; border-left: 4px solid #805ad5; }
+
+/* ===== COPY BOX ===== */
+.copy-box {
+  background: #f0fff4;
+  border: 2px solid #c6f6d5;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.copy-box.danger {
+  background: #fff5f5;
+  border-color: #fed7d7;
+}
+.copy-box-header {
+  font-weight: 700;
+  color: var(--accent2);
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+.copy-text {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.88em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+
+/* ===== PHASE TIMELINE ===== */
+.phase-timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+.phase-card {
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.phase-card .phase-num {
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.phase-card:nth-child(1) .phase-num { background: #fff5f5; color: #c53030; }
+.phase-card:nth-child(2) .phase-num { background: #fffff0; color: #b7791f; }
+.phase-card:nth-child(3) .phase-num { background: #ebf8ff; color: #2b6cb0; }
+.phase-card:nth-child(4) .phase-num { background: #f0fff4; color: #276749; }
+.phase-card ul {
+  padding: 14px 16px 16px 32px;
+  font-size: 0.85em;
+  line-height: 1.7;
+}
+.phase-card li { margin-bottom: 4px; }
+
+/* ===== COMPARISON GRID ===== */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+.compare-card {
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.compare-card .compare-header {
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 0.95em;
+}
+.compare-card.old .compare-header { background: #fff5f5; color: #c53030; }
+.compare-card.new .compare-header { background: #f0fff4; color: #276749; }
+.compare-card .compare-body { padding: 16px 20px; font-size: 0.9em; }
+.compare-card .compare-body li { margin-bottom: 6px; }
+
+/* ===== FOOTER ===== */
+.report-footer {
+  text-align: center;
+  padding: 50px 30px;
+  color: var(--text-light);
+  font-size: 0.88em;
+}
+.report-footer .logo-text {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .report-header h1 { font-size: 1.7em; }
+  .key-findings { grid-template-columns: 1fr; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .phase-timeline { grid-template-columns: 1fr 1fr; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .header-meta { gap: 14px; }
+  .section, .exec-summary, .ai-box { padding: 24px; }
+  .data-table { font-size: 0.8em; }
+  .data-table td, .data-table th { padding: 8px 6px; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<div class="report-header">
+  <div class="header-content">
+    <div class="header-badge">GBP Optimization Audit &mdash; Updated</div>
+    <h1>Echelon Services</h1>
+    <div class="subtitle">Google Business Profile Comprehensive Audit &mdash; February 2026 Update. Corrections applied, competitive intelligence added, outdated advice replaced.</div>
+    <div class="header-meta">
+      <span><strong>Client:</strong> Echelon Services (formerly Echelon Electric)</span>
+      <span><strong>Date:</strong> February 13, 2026</span>
+      <span><strong>Location:</strong> 259 Drum Point Rd #4, Brick Township, NJ 08723</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== EXECUTIVE SUMMARY ==================== -->
+<div class="container">
+<div class="exec-summary">
+  <h2>Executive Summary</h2>
+  <p>This is an <strong>updated audit</strong> replacing the January 16, 2026 report. Since that audit, Google has discontinued Q&amp;A, changed badge programs, and updated best practices. We've also conducted live research confirming that <strong>zero directory updates have been completed</strong> &mdash; every listing outside GBP still says "Echelon Electric." This report corrects all outdated advice and provides an actionable February 2026 plan.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="number green">5.0</div>
+      <div class="label">Google Rating (262+ Reviews)</div>
+    </div>
+    <div class="stat-card">
+      <div class="number red">0/12</div>
+      <div class="label">Directories Updated to "Services"</div>
+    </div>
+    <div class="stat-card">
+      <div class="number orange">0</div>
+      <div class="label">Plumbing Pages on Website</div>
+    </div>
+    <div class="stat-card">
+      <div class="number blue">4</div>
+      <div class="label">GBP Categories (Good)</div>
+    </div>
+  </div>
+
+  <div class="key-findings">
+    <div class="finding positive">
+      <div class="icon">&#9989;</div>
+      <div class="text"><strong>GBP Name Updated</strong>Successfully changed to "Echelon Services" in Google Business Profile</div>
+    </div>
+    <div class="finding positive">
+      <div class="icon">&#9989;</div>
+      <div class="text"><strong>Perfect 5.0 Rating</strong>262+ reviews with 100% positive &mdash; exceptional for home services</div>
+    </div>
+    <div class="finding negative">
+      <div class="icon">&#10060;</div>
+      <div class="text"><strong>All Directories Still "Echelon Electric"</strong>Yelp, BBB, HomeAdvisor, Nextdoor, Manta, Yellow Pages &mdash; zero updated</div>
+    </div>
+    <div class="finding negative">
+      <div class="icon">&#10060;</div>
+      <div class="text"><strong>No Plumbing Content on Website</strong>Zero plumbing service pages exist despite plumbing being a GBP category</div>
+    </div>
+    <div class="finding warn">
+      <div class="icon">&#9888;&#65039;</div>
+      <div class="text"><strong>BBB Address Mismatch</strong>BBB shows 443 Tremont Pl (08724) vs. 259 Drum Point Rd (08723) everywhere else</div>
+    </div>
+    <div class="finding warn">
+      <div class="icon">&#9888;&#65039;</div>
+      <div class="text"><strong>Brand Confusion Risk</strong>Separate company "Echelon Services, LLC" at echelon-services.net operates in NJ</div>
+    </div>
+  </div>
+
+  <div class="bottom-line">
+    <strong>Bottom Line:</strong> Echelon Services has an exceptional review foundation but the rebrand is only ~10% complete outside of GBP. Every directory, citation, and social profile still says "Echelon Electric." The website lacks plumbing content entirely and HVAC content is minimal. These gaps undermine the multi-vertical expansion and waste the GBP category additions.
+  </div>
+</div>
+</div>
+
+<!-- ==================== WHAT CHANGED SINCE JAN 16 ==================== -->
+<div class="container">
+<div class="section">
+  <h2>What Changed Since the January 16 Audit</h2>
+  <p>Our previous audit identified critical issues. Here's what's been addressed and what hasn't.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>January Status</th>
+        <th>February Status</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GBP Business Name</strong></td>
+        <td class="cell-good">Updated to "Echelon Services"</td>
+        <td class="cell-good">Still correct</td>
+        <td><span class="status good">Done</span></td>
+      </tr>
+      <tr>
+        <td><strong>GBP Description</strong></td>
+        <td class="cell-bad">Still said "Echelon Electric"</td>
+        <td>Needs verification</td>
+        <td><span class="status warning">Verify</span></td>
+      </tr>
+      <tr>
+        <td><strong>GBP Categories</strong></td>
+        <td class="cell-good">Electrician + Plumber + HVAC + Generator</td>
+        <td class="cell-good">4 categories (acceptable; could add 1-2 more within 5-6 best practice)</td>
+        <td><span class="status good">OK</span></td>
+      </tr>
+      <tr>
+        <td><strong>Directory Citations (Yelp, BBB, etc.)</strong></td>
+        <td class="cell-bad">All say "Echelon Electric"</td>
+        <td class="cell-bad">Still all say "Echelon Electric"</td>
+        <td><span class="status critical">Not Started</span></td>
+      </tr>
+      <tr>
+        <td><strong>Social Media Profiles</strong></td>
+        <td class="cell-bad">All say "Echelon Electric"</td>
+        <td class="cell-bad">Instagram still @echelon_electric</td>
+        <td><span class="status critical">Not Started</span></td>
+      </tr>
+      <tr>
+        <td><strong>Plumbing/HVAC Photos</strong></td>
+        <td class="cell-bad">No plumbing/HVAC photos</td>
+        <td class="cell-warn">Status unknown</td>
+        <td><span class="status warning">Check</span></td>
+      </tr>
+      <tr>
+        <td><strong>Website Plumbing Pages</strong></td>
+        <td class="cell-warn">Not checked in Jan audit</td>
+        <td class="cell-bad">Zero plumbing pages exist</td>
+        <td><span class="status critical">Missing</span></td>
+      </tr>
+      <tr>
+        <td><strong>Website HVAC Pages</strong></td>
+        <td class="cell-warn">Not checked in Jan audit</td>
+        <td class="cell-warn">Only boilers + indoor air quality</td>
+        <td><span class="status warning">Thin</span></td>
+      </tr>
+      <tr>
+        <td><strong>Q&amp;A Section Seeding</strong></td>
+        <td class="cell-warn">Recommended 15 Q&amp;As</td>
+        <td class="cell-bad">Feature discontinued Dec 2025</td>
+        <td><span class="status new">Replaced</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<!-- ==================== CORRECTIONS FROM JAN AUDIT ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Corrections to January 2026 Audit</h2>
+  <p>The January audit contained advice that is now outdated due to Google platform changes. These corrections are important &mdash; following the old advice could waste time or cause issues.</p>
+
+  <div class="callout red">
+    <strong>Q&amp;A Section: DISCONTINUED</strong> &mdash; The January audit recommended seeding 15 Q&amp;A questions on GBP. Google <strong>removed the Q&amp;A feature entirely in December 2025</strong>. The replacement strategy is creating a Website FAQ page with schema markup (see FAQ Schema section below).
+  </div>
+
+  <div class="callout orange">
+    <strong>Google Guaranteed Badge: RENAMED</strong> &mdash; "Google Guaranteed" is now called <strong>"Google Verified"</strong> (blue checkmark, not green). The $2,000 money-back guarantee was discontinued November 7, 2025. Background checks and licensing requirements remain the same.
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>January Audit Said</th>
+        <th>Corrected Guidance (Feb 2026)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Q&amp;A</strong></td>
+        <td>"Seed 15 Q&amp;A questions on GBP"</td>
+        <td>Feature removed. Create website FAQ + schema markup instead</td>
+      </tr>
+      <tr>
+        <td><strong>Post Length</strong></td>
+        <td>"100-300 words"</td>
+        <td>80-100 words optimal (1,500 character max)</td>
+      </tr>
+      <tr>
+        <td><strong>Post Frequency</strong></td>
+        <td>"2 posts per week"</td>
+        <td>1-3 posts per week; consistency matters more than frequency</td>
+      </tr>
+      <tr>
+        <td><strong>Post Expiration</strong></td>
+        <td>Not mentioned</td>
+        <td>Posts expire after 6 months; lose top placement after ~7 days</td>
+      </tr>
+      <tr>
+        <td><strong>Post Image Size</strong></td>
+        <td>Not specified</td>
+        <td>Optimal: 1200x900 pixels (4:3 ratio)</td>
+      </tr>
+      <tr>
+        <td><strong>Service Menu</strong></td>
+        <td>"Add 15 services"</td>
+        <td>Start with 5-10 core services. Name: 58 chars max. Description: 300 chars max</td>
+      </tr>
+      <tr>
+        <td><strong>Photo Minimum</strong></td>
+        <td>"720px minimum width"</td>
+        <td>250px minimum, 720px recommended. Google Vision AI analyzes quality</td>
+      </tr>
+      <tr>
+        <td><strong>Review Responses</strong></td>
+        <td>Assumed instant publication</td>
+        <td>Google now moderates responses (10 min to 30 day delay possible)</td>
+      </tr>
+      <tr>
+        <td><strong>Review Penalties</strong></td>
+        <td>Basic suspension warning</td>
+        <td>FTC fines up to $51,744/fake review. Public warning badges. Permanent bans</td>
+      </tr>
+      <tr>
+        <td><strong>File Naming</strong></td>
+        <td>"Use descriptive filenames for SEO"</td>
+        <td>Google Vision AI auto-tags photos; filename is less important than image content</td>
+      </tr>
+      <tr>
+        <td><strong>Messaging</strong></td>
+        <td>Referenced GBP messaging</td>
+        <td>GBP Messaging discontinued July 2024. Use phone, forms, or WhatsApp</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<!-- ==================== LIVE DIRECTORY AUDIT ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Live Directory Audit &mdash; Confirmed Findings</h2>
+  <p>We researched every major directory listing for Echelon Services in February 2026. <strong>Every single listing outside of GBP still shows "Echelon Electric."</strong></p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Business Name Shown</th>
+        <th>Address</th>
+        <th>Issues Found</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Yelp</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>Brick Township</td>
+        <td>Wrong name; 30 photos (electrical only)</td>
+        <td><span class="status critical">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>BBB</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td class="cell-bad">443 Tremont Pl, 08724</td>
+        <td>Wrong name + wrong address (different zip!)</td>
+        <td><span class="status critical">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>HomeAdvisor</strong></td>
+        <td class="cell-bad">Echelon Construction, LLC</td>
+        <td>Brick Township</td>
+        <td>Different legal name; 4.0 stars (lower than Google)</td>
+        <td><span class="status critical">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>Facebook</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>&mdash;</td>
+        <td>Wrong name, old branding</td>
+        <td><span class="status critical">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>Instagram</strong></td>
+        <td class="cell-bad">@echelon_electric</td>
+        <td>&mdash;</td>
+        <td>Handle and name still "Electric"</td>
+        <td><span class="status warning">High</span></td>
+      </tr>
+      <tr>
+        <td><strong>LinkedIn</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>&mdash;</td>
+        <td>Company page still "Electric"</td>
+        <td><span class="status warning">High</span></td>
+      </tr>
+      <tr>
+        <td><strong>Nextdoor</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>Brick, NJ</td>
+        <td>Wrong name + <strong>duplicate pages exist</strong></td>
+        <td><span class="status warning">High</span></td>
+      </tr>
+      <tr>
+        <td><strong>Yellow Pages</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>Brick, NJ 08723</td>
+        <td>Wrong name; feeds data aggregators</td>
+        <td><span class="status warning">High</span></td>
+      </tr>
+      <tr>
+        <td><strong>Manta</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>Brick, NJ</td>
+        <td>Wrong name; 0 reviews</td>
+        <td><span class="status info">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Hotfrog</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>259 Drum Point Rd</td>
+        <td>Unclaimed listing</td>
+        <td><span class="status info">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>USCity</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>259 Drum Point Rd</td>
+        <td>Unclaimed; 0 reviews</td>
+        <td><span class="status info">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Chamber of Commerce</strong></td>
+        <td class="cell-bad">Echelon Electric</td>
+        <td>259 Drum Point Rd #4</td>
+        <td>Member listing still old name</td>
+        <td><span class="status info">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout red">
+    <strong>NAP Consistency Score: POOR</strong> &mdash; Three different business names across directories ("Echelon Electric", "Echelon Services", "Echelon Construction, LLC") and two different addresses (259 Drum Point Rd vs. 443 Tremont Pl). Google uses NAP consistency as a ranking signal. This inconsistency is actively hurting local search rankings.
+  </div>
+
+  <h3>Correct NAP (Use This Everywhere)</h3>
+  <div class="copy-box">
+    <div class="copy-box-header">Canonical Business Information</div>
+    <div class="copy-text">Business Name: Echelon Services
+Address: 259 Drum Point Rd #4, Brick Township, NJ 08723
+Phone: (732) 575-9245
+Website: https://www.echelonelectricnj.com/
+Categories: Electrician, Plumber, HVAC Contractor, Generator Installation</div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== WEBSITE CONTENT GAP ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Website Content Gap Analysis</h2>
+  <p>Adding plumbing and HVAC categories to GBP without corresponding website content creates a credibility gap. When a customer searches "plumber brick township" and clicks through to echelonelectricnj.com, they find zero plumbing content. This hurts conversion and signals inauthenticity to Google.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Service Vertical</th>
+        <th>GBP Category</th>
+        <th>Website Pages</th>
+        <th>Content Depth</th>
+        <th>Gap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Electrical</strong></td>
+        <td class="cell-good">Electrician</td>
+        <td class="cell-good">18+ service pages</td>
+        <td class="cell-good">Comprehensive</td>
+        <td><span class="status good">None</span></td>
+      </tr>
+      <tr>
+        <td><strong>HVAC</strong></td>
+        <td class="cell-good">HVAC Contractor</td>
+        <td class="cell-warn">2 pages (boilers, IAQ)</td>
+        <td class="cell-warn">Thin &mdash; no AC, furnace, heat pump, ductwork</td>
+        <td><span class="status warning">Major</span></td>
+      </tr>
+      <tr>
+        <td><strong>Plumbing</strong></td>
+        <td class="cell-good">Plumber</td>
+        <td class="cell-bad">0 pages</td>
+        <td class="cell-bad">No content whatsoever</td>
+        <td><span class="status critical">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>Generators</strong></td>
+        <td class="cell-good">Electric Generator Shop</td>
+        <td class="cell-good">Dedicated pages</td>
+        <td class="cell-good">Well covered</td>
+        <td><span class="status good">None</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Website Domain Consideration</h3>
+  <p>The domain <strong>echelonelectricnj.com</strong> still contains "Electric" in the URL. While changing domains is disruptive (lose SEO equity, redirects needed), this creates ongoing brand inconsistency. Options:</p>
+  <ul class="check-list">
+    <li class="warn"><strong>Short-term:</strong> Keep current domain. Add "(formerly Echelon Electric)" on key pages for trust bridge. Ensure all page titles say "Echelon Services."</li>
+    <li class="good"><strong>Medium-term:</strong> Register echelonservicesnj.com (or similar) and set up 301 redirect from old domain. This preserves SEO equity while aligning the brand.</li>
+    <li><strong>Check availability:</strong> Note that echelon-services.net is owned by a separate NJ HVAC company. Avoid that exact domain to prevent confusion.</li>
+  </ul>
+
+  <h3>Recommended Website Pages to Create</h3>
+  <div class="tier tier-1">
+    <div class="tier-header">Priority 1: Plumbing Pages (Create Immediately)</div>
+    <div class="tier-body">
+      <ol>
+        <li><strong>Main Plumbing Services page</strong> &mdash; Hub page covering all plumbing offerings<span class="tag critical">Critical</span></li>
+        <li><strong>Water Heater Installation &amp; Repair</strong> &mdash; Tank and tankless options</li>
+        <li><strong>Drain Cleaning &amp; Sewer Service</strong> &mdash; Clogs, backups, camera inspection</li>
+        <li><strong>Pipe Repair &amp; Repiping</strong> &mdash; Leak repair, old pipe replacement</li>
+        <li><strong>Emergency Plumbing</strong> &mdash; 24/7 availability, burst pipes, flooding</li>
+        <li><strong>Fixture Installation</strong> &mdash; Sinks, toilets, faucets, showers</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="tier tier-2">
+    <div class="tier-header">Priority 2: HVAC Expansion Pages</div>
+    <div class="tier-body">
+      <ol>
+        <li><strong>Main HVAC Services page</strong> &mdash; Hub page for all HVAC work<span class="tag effort">Expand</span></li>
+        <li><strong>AC Installation &amp; Repair</strong> &mdash; Central air, mini-splits, emergency AC</li>
+        <li><strong>Furnace Repair &amp; Installation</strong> &mdash; Gas and electric furnace service</li>
+        <li><strong>Heat Pump Services</strong> &mdash; Installation, repair, maintenance</li>
+        <li><strong>Ductwork &amp; Ventilation</strong> &mdash; Duct cleaning, repair, installation</li>
+        <li><strong>HVAC Maintenance Plans</strong> &mdash; Annual tune-ups, membership options</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== GBP DESCRIPTION ==================== -->
+<div class="container">
+<div class="section">
+  <h2>GBP Description &mdash; Updated Copy</h2>
+  <p>The description from the January audit is still appropriate but should be verified. If it hasn't been updated yet, apply this immediately.</p>
+
+  <div class="copy-box">
+    <div class="copy-box-header">Recommended GBP Description (750 characters)</div>
+    <div class="copy-text">Echelon Services (formerly Echelon Electric) is a locally owned full-service home contractor serving Brick Township and central New Jersey. We specialize in electrical work, plumbing services, and HVAC installation and repair. Our certified technicians handle residential and commercial projects including electrical panel upgrades, generator installation, water heater installation, pipe repairs, furnace and AC service, and boiler maintenance. With a perfect 5.0-star rating from 262+ reviews, we deliver safe, reliable service on every project. Available 24/7 for electrical, plumbing, and HVAC emergencies. Proudly serving Brick Township, Toms River, Point Pleasant, and all of Ocean County, NJ.</div>
+  </div>
+
+  <div class="callout blue">
+    <strong>Key elements:</strong> "(formerly Echelon Electric)" trust bridge, all three service verticals mentioned, social proof (5.0 stars, 262+ reviews), 24/7 availability, geographic coverage with specific city names for local SEO.
+  </div>
+</div>
+</div>
+
+<!-- ==================== FAQ SCHEMA (Replaces Q&A) ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Website FAQ Schema Strategy <span class="status new">Replaces Q&amp;A</span></h2>
+  <p>Google's Q&amp;A feature was <strong>discontinued in December 2025</strong>. The replacement is creating FAQ content on your website with structured data markup. Google's AI ("Ask about this place") now pulls answers from your website content, reviews, and photos.</p>
+
+  <div class="callout purple">
+    <strong>Why FAQ Schema Still Matters:</strong> While FAQ rich results (expandable dropdowns) are now limited to government and health sites, pages with FAQ schema markup are <strong>more likely to appear in Google AI Overviews</strong> and voice search responses. It also helps ChatGPT, Perplexity, and other AI platforms cite your business accurately.
+  </div>
+
+  <h3>Recommended FAQ Page Structure</h3>
+  <p>Create a dedicated FAQ page at <code>echelonelectricnj.com/faq/</code> with 5-10 strong questions (quality over quantity). Include FAQPage JSON-LD schema markup.</p>
+
+  <h4>Recommended Questions (Adapted from Jan Audit Q&amp;As)</h4>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>Do you offer 24/7 emergency services?</strong></td>
+        <td>Yes &mdash; electrical, plumbing, and HVAC emergencies. Call (732) 575-9245 anytime.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>What areas do you serve?</strong></td>
+        <td>Brick Township, Toms River, Point Pleasant, Lakewood, and all of Ocean County, NJ.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>I thought you were Echelon Electric &mdash; do you still do electrical work?</strong></td>
+        <td>Yes! We expanded from Echelon Electric to Echelon Services. Same team, now offering plumbing and HVAC too.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>What plumbing services do you offer?</strong></td>
+        <td>Water heater installation, pipe repairs, drain cleaning, fixture installation, emergency leak repairs.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Do you install and repair HVAC systems?</strong></td>
+        <td>Yes &mdash; furnaces, central AC, boilers, heat pumps, ductwork, and maintenance plans.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>Are you licensed and insured?</strong></td>
+        <td>All technicians are fully licensed, insured, and certified for electrical, plumbing, and HVAC in New Jersey.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>Do you offer free estimates?</strong></td>
+        <td>Yes, free estimates for most residential and commercial projects.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>Do you install whole-home generators?</strong></td>
+        <td>Yes &mdash; Generac and Kohler standby generators with installation, maintenance, and repair.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Schema Markup Implementation</h3>
+  <div class="callout blue">
+    <strong>Technical Implementation:</strong> Add FAQPage JSON-LD structured data to the FAQ page. Each question/answer must be visible on the page (not hidden in tabs or accordions). Keep answers under 3,000 characters. Validate with Google's Rich Results Test tool.
+  </div>
+
+  <div class="copy-box">
+    <div class="copy-box-header">Sample FAQPage JSON-LD (add to FAQ page &lt;head&gt;)</div>
+    <div class="copy-text">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer 24/7 emergency services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Echelon Services provides 24/7 emergency electrical, plumbing, and HVAC services throughout Brick Township and Ocean County. Call (732) 575-9245 anytime."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== SERVICE MENU ==================== -->
+<div class="container">
+<div class="section">
+  <h2>GBP Service Menu &mdash; Updated Recommendations</h2>
+  <p>Start with <strong>5-10 core services</strong> rather than 15. Add more over time based on performance. Character limits are strict.</p>
+
+  <div class="callout orange">
+    <strong>Character Limits:</strong> Service Name: <strong>58 characters max</strong>. Service Description: <strong>300 characters max</strong>. Exceeding these causes truncation. Use Google's auto-suggested services when available (better matching).
+  </div>
+
+  <h3>Recommended Core Services (10)</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Service Name (max 58 chars)</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Electrical</strong></td>
+        <td>Electrical Panel Upgrade</td>
+        <td>$1,500 - $3,500</td>
+      </tr>
+      <tr>
+        <td><strong>Electrical</strong></td>
+        <td>Whole-Home Generator Installation</td>
+        <td>$6,000 - $15,000</td>
+      </tr>
+      <tr>
+        <td><strong>Electrical</strong></td>
+        <td>EV Charger Installation</td>
+        <td>$500 - $2,500</td>
+      </tr>
+      <tr>
+        <td><strong>Plumbing</strong></td>
+        <td>Water Heater Installation &amp; Repair</td>
+        <td>$1,200 - $3,500</td>
+      </tr>
+      <tr>
+        <td><strong>Plumbing</strong></td>
+        <td>Drain Cleaning &amp; Sewer Service</td>
+        <td>$150 - $400</td>
+      </tr>
+      <tr>
+        <td><strong>Plumbing</strong></td>
+        <td>Emergency Plumbing Repair</td>
+        <td>$250 - $1,000+</td>
+      </tr>
+      <tr>
+        <td><strong>HVAC</strong></td>
+        <td>Central AC Installation &amp; Repair</td>
+        <td>$4,000 - $8,000</td>
+      </tr>
+      <tr>
+        <td><strong>HVAC</strong></td>
+        <td>Furnace Repair &amp; Replacement</td>
+        <td>$150 - $5,000</td>
+      </tr>
+      <tr>
+        <td><strong>HVAC</strong></td>
+        <td>Boiler Service &amp; Replacement</td>
+        <td>$200 - $6,000</td>
+      </tr>
+      <tr>
+        <td><strong>Multi</strong></td>
+        <td>24/7 Emergency Home Services</td>
+        <td>Call for pricing</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Maintenance:</strong> Review service list quarterly. Update immediately when adding new services or running promotions.</p>
+</div>
+</div>
+
+<!-- ==================== PHOTO STRATEGY ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Photo Strategy &mdash; Updated Guidelines</h2>
+
+  <div class="callout blue">
+    <strong>Google Vision AI Update:</strong> Google now uses AI to analyze all uploaded photos for relevance, quality, policy compliance, and stock photo detection. <strong>Image content matters more than filename.</strong> Focus on authentic, high-quality images of your actual work, team, and equipment.
+  </div>
+
+  <h3>Current Photo Inventory</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Needed</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Electrical Work</strong></td>
+        <td class="cell-good">Strong (30+ photos on Yelp alone)</td>
+        <td>Maintain with monthly updates</td>
+        <td><span class="status good">Good</span></td>
+      </tr>
+      <tr>
+        <td><strong>Plumbing Work</strong></td>
+        <td class="cell-bad">None</td>
+        <td>10-15 photos</td>
+        <td><span class="status critical">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>HVAC Work</strong></td>
+        <td class="cell-bad">None or minimal</td>
+        <td>10-15 photos</td>
+        <td><span class="status critical">Critical</span></td>
+      </tr>
+      <tr>
+        <td><strong>Team / Vehicles</strong></td>
+        <td class="cell-warn">Limited</td>
+        <td>5-8 photos</td>
+        <td><span class="status warning">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Before/After</strong></td>
+        <td class="cell-warn">Unknown</td>
+        <td>8-12 photos (all three verticals)</td>
+        <td><span class="status warning">High</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Photo Specifications (2026)</h3>
+  <ul class="check-list">
+    <li><strong>Minimum:</strong> 250px x 250px (Google's actual minimum)</li>
+    <li><strong>Recommended:</strong> 720px x 720px or higher (1080px+ preferred)</li>
+    <li><strong>Format:</strong> JPG or PNG, 10KB - 5MB</li>
+    <li><strong>Post images:</strong> 1200x900 pixels (4:3 ratio) to prevent cropping</li>
+    <li><strong>Logo:</strong> 720x720 pixels (square)</li>
+    <li><strong>Cover photo:</strong> 1024x575 pixels (16:9 ratio)</li>
+    <li class="warn"><strong>Avoid:</strong> Stock photos (AI detects them), blurry images, heavy filters, text overlays</li>
+  </ul>
+</div>
+</div>
+
+<!-- ==================== POSTS STRATEGY ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Google Posts Strategy &mdash; Updated</h2>
+
+  <h3>Updated Best Practices</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Parameter</th>
+        <th>Old Guidance (Jan 2026)</th>
+        <th>Current Best Practice</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frequency</strong></td>
+        <td>2 posts per week</td>
+        <td>1-3 posts per week (consistency > quantity)</td>
+      </tr>
+      <tr>
+        <td><strong>Length</strong></td>
+        <td>100-300 words</td>
+        <td>80-100 words optimal (max 1,500 characters)</td>
+      </tr>
+      <tr>
+        <td><strong>Image Size</strong></td>
+        <td>Not specified</td>
+        <td>1200x900px (4:3 ratio)</td>
+      </tr>
+      <tr>
+        <td><strong>Expiration</strong></td>
+        <td>Not mentioned</td>
+        <td>"What's New" posts lose top spot after ~7 days, archive after 6 months</td>
+      </tr>
+      <tr>
+        <td><strong>Types</strong></td>
+        <td>What's New only</td>
+        <td>What's New, Offers (with dates), Events (with dates)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Sample Posts (Updated for February 2026)</h3>
+
+  <div class="copy-box">
+    <div class="copy-box-header">Post #1 &mdash; Multi-Service Announcement (80 words)</div>
+    <div class="copy-text">Echelon Services now offers full-service home solutions in Brick Township!
+
+Same trusted team, expanded capabilities:
+- Electrical: panels, generators, EV chargers
+- Plumbing: water heaters, drain cleaning, repairs
+- HVAC: furnaces, AC, boilers
+
+One call for all your home needs. 24/7 emergency service available.
+
+Call (732) 575-9245 or visit echelonelectricnj.com
+
+5.0 stars from 262+ happy customers</div>
+  </div>
+
+  <div class="copy-box">
+    <div class="copy-box-header">Post #2 &mdash; Seasonal HVAC (75 words)</div>
+    <div class="copy-text">Is your heating system ready for the rest of winter?
+
+Echelon Services offers furnace tune-ups, boiler repairs, and emergency heating service across Ocean County.
+
+Signs you need service:
+- Unusual noises from furnace
+- Uneven heating between rooms
+- Rising energy bills
+
+Don't wait for a breakdown. Schedule maintenance today.
+
+(732) 575-9245 | Available 24/7</div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== COMPETITIVE LANDSCAPE ==================== -->
+<div class="container">
+<div class="ai-box">
+  <h2>Competitive Landscape &mdash; Brick Township, NJ</h2>
+  <p>Understanding who Echelon Services competes against in each vertical helps prioritize where to strengthen positioning.</p>
+
+  <p style="color: rgba(255,255,255,0.5); font-size: 0.82em; font-style: italic; margin-top: 16px;">Competitive data collected February 2026 via Google Business Profile search and directory listings. Ratings and review counts are approximate and subject to change.</p>
+
+  <h3>Electrical Competitors</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Competitor</th>
+        <th>Rating</th>
+        <th>Reviews</th>
+        <th>Threat Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>DeSanto Electric LLC</strong></td>
+        <td>4.9</td>
+        <td>500+</td>
+        <td><span class="status critical">High</span></td>
+      </tr>
+      <tr>
+        <td><strong>Power Up Electric NJ</strong></td>
+        <td>5.0</td>
+        <td>86</td>
+        <td><span class="status warning">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Watts Good Electric</strong></td>
+        <td>5.0</td>
+        <td>Multiple</td>
+        <td><span class="status warning">Medium</span></td>
+      </tr>
+      <tr>
+        <td><strong>Semper Fi Electric</strong></td>
+        <td>4.8</td>
+        <td>25+</td>
+        <td><span class="status info">Lower</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Multi-Trade Competitors (Electrical + Plumbing + HVAC)</h3>
+  <p style="color: rgba(255,255,255,0.7); margin-bottom: 16px;">These are the companies Echelon will compete against directly as a multi-vertical provider.</p>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Competitor</th>
+        <th>Services</th>
+        <th>Est. Since</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Garon T Plumbing, Heating, AC &amp; Electric</strong></td>
+        <td>All 3 + AC</td>
+        <td>1993</td>
+        <td>Strongest local multi-trade. 30+ years in Brick</td>
+      </tr>
+      <tr>
+        <td><strong>Gold Medal Service</strong></td>
+        <td>Plumbing, Electrical, HVAC</td>
+        <td>&mdash;</td>
+        <td>Regional. BBB A+ rated. Serves Brick</td>
+      </tr>
+      <tr>
+        <td><strong>Bailey Plumbing Heating Cooling</strong></td>
+        <td>Plumbing, HVAC</td>
+        <td>1989</td>
+        <td>Family-owned. Direct local competitor</td>
+      </tr>
+      <tr>
+        <td><strong>Arctic Air Conditioning</strong></td>
+        <td>HVAC, Electrical, Plumbing</td>
+        <td>50+ years</td>
+        <td>NATE-certified. Regional player</td>
+      </tr>
+      <tr>
+        <td><strong>Lezgus Plumbing, Heating &amp; Cooling</strong></td>
+        <td>Plumbing, HVAC</td>
+        <td>&mdash;</td>
+        <td>Toms River / Brick area</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Echelon's Competitive Position</h3>
+  <ul class="ai-cite-list">
+    <li><span class="bullet"></span><strong style="color:white">Advantage:</strong> Perfect 5.0 rating &mdash; no multi-trade competitor matches this. DeSanto has more reviews (500+) but at 4.9.</li>
+    <li><span class="bullet"></span><strong style="color:white">Advantage:</strong> Electrical brand is strong. Known quantity in Brick Township for electrical work.</li>
+    <li><span class="bullet"></span><strong style="color:white">Challenge:</strong> Plumbing and HVAC are unproven &mdash; zero web content, zero reviews mentioning these services.</li>
+    <li><span class="bullet"></span><strong style="color:white">Challenge:</strong> Competing against 30+ year multi-trade companies (Garon T, Bailey) with no plumbing/HVAC track record.</li>
+    <li><span class="bullet"></span><strong style="color:white">Opportunity:</strong> None of the multi-trade competitors have a 5.0 rating. The review foundation transfers trust across verticals.</li>
+    <li><span class="bullet"></span><strong style="color:white">Risk:</strong> Separate "Echelon Services, LLC" at echelon-services.net could cause brand confusion in search results.</li>
+  </ul>
+</div>
+</div>
+
+<!-- ==================== GOOGLE AI MODE ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Google AI Mode &amp; "Ask About This Place" <span class="status new">New 2025-2026</span></h2>
+  <p>Google replaced the Q&amp;A feature with AI-powered responses. When customers search for Echelon Services, Google's Gemini AI generates answers by pulling from:</p>
+
+  <ul class="check-list">
+    <li><strong>Your GBP description and services</strong> &mdash; Make sure both are complete and accurate</li>
+    <li><strong>Your website content</strong> &mdash; Especially FAQ pages with schema markup</li>
+    <li><strong>Your reviews</strong> &mdash; AI extracts themes and summarizes ("Review Highlights")</li>
+    <li><strong>Your photos</strong> &mdash; Google Vision AI interprets what services you provide</li>
+  </ul>
+
+  <div class="callout blue">
+    <strong>Profile Completeness:</strong> Google now displays a Profile Completion Score in the GBP dashboard. 100% completion is increasingly weighted in local rankings. Fill <em>all</em> available fields: description, attributes, services, photos, hours including special hours.
+  </div>
+
+  <h3>What This Means for Echelon</h3>
+  <p>Without plumbing content on the website and without plumbing/HVAC photos on GBP, Google's AI cannot generate accurate answers about those services. When someone asks "Does Echelon Services do plumbing?", the AI has almost nothing to cite. <strong>Content creates the data that AI serves to customers.</strong></p>
+
+  <h3>Review Highlights (AI-Generated)</h3>
+  <p>Google's AI extracts themes from your reviews and displays them as "Review Highlights" &mdash; tags like "fast service", "fair pricing", "knowledgeable staff." These appear prominently on your profile. You can't control which highlights appear, but encouraging detailed reviews about specific services may influence them. As plumbing/HVAC reviews come in, new highlight themes will emerge for those verticals.</p>
+</div>
+</div>
+
+<!-- ==================== REVIEW MANAGEMENT ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Review Management &mdash; Updated Strategy</h2>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="number green">5.0</div>
+      <div class="label">Current Rating</div>
+    </div>
+    <div class="stat-card">
+      <div class="number green">262+</div>
+      <div class="label">Total Reviews</div>
+    </div>
+    <div class="stat-card">
+      <div class="number blue">&lt;24h</div>
+      <div class="label">Target Response Time</div>
+    </div>
+    <div class="stat-card">
+      <div class="number orange">0</div>
+      <div class="label">Reviews Mentioning Plumbing/HVAC</div>
+    </div>
+  </div>
+
+  <h3>New Review Considerations (2025-2026 Changes)</h3>
+
+  <div class="callout orange">
+    <strong>Response Moderation:</strong> Google now moderates business responses before publishing. Delays of 10 minutes to 30 days are possible. Responses can be rejected if they contain promotional language, links, or confrontational tone. Still respond within 24 hours &mdash; but don't be alarmed if it doesn't appear immediately.
+  </div>
+
+  <div class="callout blue">
+    <strong>Pseudonymous Reviews:</strong> Since late 2024, Google allows reviewers to use nicknames and alternate photos. You may not recognize customers by name. Focus on review content details (specific services, dates, staff names) to assess authenticity.
+  </div>
+
+  <div class="callout red">
+    <strong>Stricter Penalties (2026):</strong> FTC fines up to $51,744 per fake review. Google now issues public warning badges for businesses caught with fake reviews. Temporary review collection freeze and permanent bans are possible. Never incentivize, gate, or coach review content.
+  </div>
+
+  <h3>Multi-Vertical Review Strategy</h3>
+  <p>The critical gap: all 262+ reviews likely mention electrical work. As plumbing and HVAC jobs are completed, building review volume for those verticals is essential for:</p>
+  <ul class="check-list">
+    <li><strong>Search visibility:</strong> Google weighs review content for keyword relevance. Reviews mentioning "plumbing" help rank for plumbing searches</li>
+    <li><strong>AI Highlights:</strong> Review themes like "great plumber" or "fast HVAC repair" will emerge as those reviews accumulate</li>
+    <li class="warn"><strong>Don't coach:</strong> Simply ask "would you mind mentioning what we helped you with?" &mdash; let customers use their own words</li>
+  </ul>
+
+  <h3>Review Request Tools (Official)</h3>
+  <p>Google now officially supports shareable review request links and QR codes. Access through GBP &rarr; Reviews &rarr; "Ask for reviews." Distribute via: post-service texts/emails, invoices, printed QR codes on business cards and door hangers.</p>
+</div>
+</div>
+
+<!-- ==================== CITATION UPDATE PLAN ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Citation Update Action Plan</h2>
+  <p>Every directory needs updating from "Echelon Electric" to "Echelon Services." Prioritize by SEO authority and customer visibility.</p>
+
+  <h3>Data Aggregators (Update First)</h3>
+  <div class="callout blue">
+    <strong>Why aggregators first:</strong> Data aggregators push business information to hundreds of smaller directories automatically. Updating at the aggregator level fixes many listings downstream.
+  </div>
+  <ul class="check-list">
+    <li class="bad"><strong>Data Axle</strong> (formerly Infogroup) &mdash; Largest aggregator. Update name, verify address</li>
+    <li class="bad"><strong>Neustar Localeze</strong> &mdash; Second largest. Submit name change</li>
+    <li class="bad"><strong>Foursquare</strong> &mdash; Powers many apps. Claim and update listing</li>
+  </ul>
+
+  <h3>Priority 1: High-Authority Directories</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Current Name</th>
+        <th>Actions Required</th>
+        <th>Est. Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>BBB</strong></td>
+        <td class="cell-bad">"Echelon Electric" + wrong address</td>
+        <td>Update name, fix address from 443 Tremont to 259 Drum Point, add plumbing/HVAC categories</td>
+        <td>30 min</td>
+      </tr>
+      <tr>
+        <td><strong>Yelp</strong></td>
+        <td class="cell-bad">"Echelon Electric"</td>
+        <td>Update name, description, categories. Add plumbing/HVAC photos</td>
+        <td>30 min</td>
+      </tr>
+      <tr>
+        <td><strong>HomeAdvisor</strong></td>
+        <td class="cell-bad">"Echelon Construction, LLC"</td>
+        <td>Update DBA to "Echelon Services", update categories</td>
+        <td>30 min</td>
+      </tr>
+      <tr>
+        <td><strong>Facebook</strong></td>
+        <td class="cell-bad">"Echelon Electric"</td>
+        <td>Update page name, About section, cover photo, categories</td>
+        <td>20 min</td>
+      </tr>
+      <tr>
+        <td><strong>Angi</strong></td>
+        <td class="cell-bad">Likely "Echelon Electric"</td>
+        <td>Update name, add plumbing/HVAC service categories</td>
+        <td>20 min</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Priority 2: Secondary Directories &amp; Social</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Actions</th>
+        <th>Est. Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Instagram</strong></td>
+        <td>Update display name, bio, and profile pic. Consider handle change if possible</td>
+        <td>15 min</td>
+      </tr>
+      <tr>
+        <td><strong>LinkedIn</strong></td>
+        <td>Update company name and description</td>
+        <td>10 min</td>
+      </tr>
+      <tr>
+        <td><strong>Nextdoor</strong></td>
+        <td>Update name on primary page. <strong>Merge or remove duplicate page</strong></td>
+        <td>20 min</td>
+      </tr>
+      <tr>
+        <td><strong>Yellow Pages</strong></td>
+        <td>Claim listing, update name</td>
+        <td>15 min</td>
+      </tr>
+      <tr>
+        <td><strong>Apple Maps</strong></td>
+        <td>Verify listing via Apple Business Connect, update name</td>
+        <td>15 min</td>
+      </tr>
+      <tr>
+        <td><strong>Bing Places</strong></td>
+        <td>Claim or update listing</td>
+        <td>15 min</td>
+      </tr>
+      <tr>
+        <td><strong>Thumbtack</strong></td>
+        <td>Update profile name, add new service categories</td>
+        <td>15 min</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Priority 3: Claim Unclaimed Listings</h3>
+  <ul class="check-list">
+    <li class="bad"><strong>Hotfrog</strong> &mdash; Unclaimed. Claim and update to "Echelon Services"</li>
+    <li class="bad"><strong>USCity</strong> &mdash; Unclaimed. Claim and update</li>
+    <li><strong>Manta</strong> &mdash; Update listing (0 reviews, low priority)</li>
+    <li><strong>Chamber of Commerce</strong> &mdash; Contact to update member listing</li>
+  </ul>
+</div>
+</div>
+
+<!-- ==================== LSA / GOOGLE VERIFIED ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Local Service Ads &amp; Google Verified Badge <span class="status new">Updated</span></h2>
+
+  <div class="compare-grid">
+    <div class="compare-card old">
+      <div class="compare-header">Old: Google Guaranteed (Before Oct 2025)</div>
+      <div class="compare-body">
+        <ul>
+          <li>Green checkmark badge</li>
+          <li>$2,000 money-back guarantee for customers</li>
+          <li>Background check + license verification</li>
+          <li>Separate badges: Guaranteed, Screened, License Verified</li>
+        </ul>
+      </div>
+    </div>
+    <div class="compare-card new">
+      <div class="compare-header">New: Google Verified (After Oct 2025)</div>
+      <div class="compare-body">
+        <ul>
+          <li><strong>Blue</strong> checkmark badge</li>
+          <li><strong>No money-back guarantee</strong> (discontinued Nov 7, 2025)</li>
+          <li>Background check + license verification (same)</li>
+          <li>Single consolidated "Google Verified" badge</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h3>LSA Cost Estimates for Echelon's Verticals (2026)</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Service Category</th>
+        <th>Est. Cost Per Lead</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Electrical</strong></td>
+        <td>$35 - $70</td>
+        <td>Higher for panel/generator work; lower for basic repairs</td>
+      </tr>
+      <tr>
+        <td><strong>Plumbing</strong></td>
+        <td>$40 - $75</td>
+        <td>Higher than 2024 estimates; emergency leads cost more</td>
+      </tr>
+      <tr>
+        <td><strong>HVAC</strong></td>
+        <td>$45 - $85</td>
+        <td>Peak: summer (AC) and winter (heating). Budget accordingly</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout blue">
+    <strong>LSA + GBP Review Consolidation:</strong> Google has been consolidating Local Services Ads reviews into Google Business Profile management. If active, LSA reviews may appear on your GBP listing, which could help build multi-vertical review volume. Verify current status in your GBP dashboard.
+  </div>
+</div>
+</div>
+
+<!-- ==================== 30-DAY ACTION PLAN ==================== -->
+<div class="container">
+<div class="section">
+  <h2>30-Day Action Plan &mdash; February/March 2026</h2>
+  <p>Prioritized by impact and urgency. Week 1 items are prerequisites for everything else.</p>
+
+  <div class="phase-timeline">
+    <div class="phase-card">
+      <div class="phase-num">Week 1: Critical Fixes</div>
+      <ul>
+        <li><strong>Verify</strong> GBP description was updated</li>
+        <li><strong>Fix BBB</strong> address (443 Tremont &rarr; 259 Drum Point)</li>
+        <li><strong>Update</strong> Yelp, Facebook, Angi names</li>
+        <li><strong>Submit</strong> data aggregator changes</li>
+        <li>Collect plumbing/HVAC photos from field</li>
+      </ul>
+    </div>
+    <div class="phase-card">
+      <div class="phase-num">Week 2: Content & Citations</div>
+      <ul>
+        <li><strong>Create</strong> plumbing service pages on website</li>
+        <li><strong>Update</strong> HomeAdvisor, LinkedIn, Instagram</li>
+        <li><strong>Merge</strong> duplicate Nextdoor pages</li>
+        <li><strong>Upload</strong> first batch plumbing photos to GBP</li>
+        <li>Publish first Google Post</li>
+      </ul>
+    </div>
+    <div class="phase-card">
+      <div class="phase-num">Week 3: Expansion</div>
+      <ul>
+        <li><strong>Create</strong> HVAC expansion pages (AC, furnace, heat pump)</li>
+        <li><strong>Build</strong> FAQ page with schema markup</li>
+        <li><strong>Upload</strong> HVAC photos to GBP</li>
+        <li><strong>Claim</strong> unclaimed listings (Hotfrog, USCity)</li>
+        <li>Continue Google Posts (1-2/week)</li>
+      </ul>
+    </div>
+    <div class="phase-card">
+      <div class="phase-num">Week 4: Polish & Verify</div>
+      <ul>
+        <li><strong>Verify</strong> all citations show "Echelon Services"</li>
+        <li><strong>Add</strong> GBP service menu (10 services)</li>
+        <li><strong>Test</strong> FAQ schema with Rich Results Test</li>
+        <li><strong>Review</strong> GBP Performance tab metrics</li>
+        <li>Plan ongoing posting schedule</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Responsibility Matrix</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Owner</th>
+        <th>Priority</th>
+        <th>Week</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fix BBB address + name</td>
+        <td>Breakthrough3X</td>
+        <td><span class="status critical">Critical</span></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Update Yelp, Facebook, Angi names</td>
+        <td>Shared (client provides access, agency executes)</td>
+        <td><span class="status critical">Critical</span></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Submit data aggregator changes</td>
+        <td>Breakthrough3X</td>
+        <td><span class="status critical">Critical</span></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Collect plumbing/HVAC work photos</td>
+        <td>Echelon Services (Client)</td>
+        <td><span class="status critical">Critical</span></td>
+        <td>1-3</td>
+      </tr>
+      <tr>
+        <td>Create plumbing website pages</td>
+        <td>Breakthrough3X</td>
+        <td><span class="status critical">Critical</span></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Create HVAC expansion pages</td>
+        <td>Breakthrough3X</td>
+        <td><span class="status warning">High</span></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Build FAQ page + schema</td>
+        <td>Breakthrough3X</td>
+        <td><span class="status warning">High</span></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Upload photos to GBP</td>
+        <td>Breakthrough3X</td>
+        <td><span class="status warning">High</span></td>
+        <td>2-3</td>
+      </tr>
+      <tr>
+        <td>Add GBP service menu</td>
+        <td>Breakthrough3X</td>
+        <td><span class="status info">Medium</span></td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Google Posts (ongoing)</td>
+        <td>Echelon Services (Client) &mdash; optional</td>
+        <td><span class="status info">Medium</span></td>
+        <td>2+</td>
+      </tr>
+      <tr>
+        <td>Respond to reviews</td>
+        <td>Echelon Services (Client)</td>
+        <td><span class="status warning">Ongoing</span></td>
+        <td>Always</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<!-- ==================== BRAND CONFUSION ALERT ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Brand Confusion Risk: echelon-services.net</h2>
+
+  <div class="callout red">
+    <strong>Alert:</strong> A separate company called <strong>"Echelon Services, LLC"</strong> operates at <strong>echelon-services.net</strong> providing HVAC services in NJ/NY. This is <em>not</em> affiliated with your business but could cause confusion in search results as you rebrand to "Echelon Services."
+  </div>
+
+  <h3>Mitigation Steps</h3>
+  <ul class="check-list">
+    <li><strong>Always use full name context:</strong> "Echelon Services, Brick Township" or "Echelon Services NJ" in all marketing</li>
+    <li><strong>Strengthen local signals:</strong> Consistent NAP with Brick Township address reduces confusion</li>
+    <li><strong>Register protective domains:</strong> Consider registering echelonservicesnj.com or echelonservicesbrick.com</li>
+    <li class="warn"><strong>Monitor search results:</strong> Regularly search "Echelon Services NJ" to ensure your listing appears correctly, not the other company</li>
+  </ul>
+</div>
+</div>
+
+<!-- ==================== PERFORMANCE TRACKING ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Performance Tracking &mdash; What to Monitor</h2>
+  <p>Google renamed "Insights" to the <strong>"Performance" tab</strong> in 2023. Some legacy metrics are no longer available.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Where to Find</th>
+        <th>What to Track</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Search Terms</strong></td>
+        <td>Performance tab &rarr; Search queries</td>
+        <td>Watch for plumbing/HVAC terms appearing as services gain traction</td>
+      </tr>
+      <tr>
+        <td><strong>Platform Breakdown</strong></td>
+        <td>Performance tab</td>
+        <td>Search vs Maps visibility; Desktop vs Mobile</td>
+      </tr>
+      <tr>
+        <td><strong>Customer Actions</strong></td>
+        <td>Performance tab</td>
+        <td>Calls (mobile only), website clicks, direction requests</td>
+      </tr>
+      <tr>
+        <td><strong>Profile Completion</strong></td>
+        <td>GBP Dashboard</td>
+        <td>Target 100% completion score</td>
+      </tr>
+      <tr>
+        <td><strong>Review Themes</strong></td>
+        <td>Reviews section</td>
+        <td>Track when plumbing/HVAC mentions start appearing in Review Highlights</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout orange">
+    <strong>Data Limitation:</strong> Google removed low-volume search queries (11-100 impressions) from reports in 2025. Use third-party rank tracking tools (BrightLocal, Whitespark) for comprehensive keyword visibility data across all three service verticals.
+  </div>
+</div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<div class="report-footer">
+  <div class="logo-text">Breakthrough3X</div>
+  <p>GBP Optimization Audit &mdash; Echelon Services</p>
+  <p>February 13, 2026 | Prepared with corrected 2026 best practices</p>
+  <p style="margin-top: 12px; font-size: 0.82em;">Replaces January 16, 2026 audit. All Q&amp;A references removed. Google Verified badge updates applied. Competitive intelligence added.</p>
+</div>
+
+</body>
+</html>
