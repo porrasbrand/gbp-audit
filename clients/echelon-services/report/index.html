@@ -237,6 +237,8 @@ body {
 }
 .data-table tr:nth-child(even) td { background: #f7fafc; }
 .data-table tr:hover td { background: #edf2f7; }
+.data-table td a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+.data-table td a:hover { border-bottom-style: solid; }
 .data-table .cell-bad { color: var(--red); font-weight: 600; }
 .data-table .cell-good { color: var(--green); font-weight: 600; }
 .data-table .cell-warn { color: var(--orange); font-weight: 600; }
@@ -522,24 +524,32 @@ body {
     </div>
     <div class="finding negative">
       <div class="icon">&#10060;</div>
-      <div class="text"><strong>All Directories Still "Echelon Electric"</strong>Yelp, BBB, HomeAdvisor, Nextdoor, Manta, Yellow Pages &mdash; zero updated</div>
+      <div class="text"><strong>GBP Description Omits Plumbing</strong>Description mentions electrical + HVAC but NOT plumbing, despite "Plumber" category</div>
     </div>
     <div class="finding negative">
       <div class="icon">&#10060;</div>
-      <div class="text"><strong>No Plumbing Content on Website</strong>Zero plumbing service pages exist despite plumbing being a GBP category</div>
+      <div class="text"><strong>Service Menu Massively Imbalanced</strong>60+ electrical services (with descriptions) vs. 14 HVAC and 4 plumbing (no descriptions)</div>
+    </div>
+    <div class="finding negative">
+      <div class="icon">&#10060;</div>
+      <div class="text"><strong>All Directories Still "Echelon Electric"</strong>Yelp, BBB, HomeAdvisor, Nextdoor, Manta, Yellow Pages &mdash; zero updated</div>
+    </div>
+    <div class="finding warn">
+      <div class="icon">&#9888;&#65039;</div>
+      <div class="text"><strong>GBP Lists Services Client May Not Offer</strong>GBP shows AC installation, duct repair, thermostats &mdash; client only confirmed boiler/IAQ HVAC services</div>
+    </div>
+    <div class="finding warn">
+      <div class="icon">&#9888;&#65039;</div>
+      <div class="text"><strong>Website vs GBP Mismatch</strong>No plumbing pages on website; HVAC hub only covers boilers + indoor air quality</div>
     </div>
     <div class="finding warn">
       <div class="icon">&#9888;&#65039;</div>
       <div class="text"><strong>BBB Address Mismatch</strong>BBB shows 443 Tremont Pl (08724) vs. 259 Drum Point Rd (08723) everywhere else</div>
     </div>
-    <div class="finding warn">
-      <div class="icon">&#9888;&#65039;</div>
-      <div class="text"><strong>Brand Confusion Risk</strong>Separate company "Echelon Services, LLC" at echelon-services.net operates in NJ</div>
-    </div>
   </div>
 
   <div class="bottom-line">
-    <strong>Bottom Line:</strong> Echelon Services has an exceptional review foundation but the rebrand is only ~10% complete outside of GBP. Every directory, citation, and social profile still says "Echelon Electric." The website lacks plumbing content entirely and HVAC content is minimal. These gaps undermine the multi-vertical expansion and waste the GBP category additions.
+    <strong>Bottom Line:</strong> Echelon Services has an exceptional review foundation but the rebrand is only ~10% complete outside of GBP. Every directory still says "Echelon Electric." More critically, the GBP lists HVAC services (AC, ductwork, thermostats) the client hasn't confirmed offering, the description omits plumbing despite it being a category, and 60+ electrical services have descriptions while 18 plumbing/HVAC services have none. <strong>Client clarification is needed before further GBP optimization can proceed accurately.</strong>
   </div>
 </div>
 </div>
@@ -616,6 +626,295 @@ body {
       </tr>
     </tbody>
   </table>
+</div>
+</div>
+
+<!-- ==================== ACTUAL GBP PROFILE DATA ==================== -->
+<div class="container">
+<div class="section">
+  <h2>Current GBP Profile Settings (Live Data)</h2>
+  <p>Pulled directly from the Echelon Services Google Business Profile manager. This is what Google currently shows.</p>
+
+  <h3>Business Information</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Current Value</th>
+        <th>Assessment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Business Name</strong></td>
+        <td>Echelon Services</td>
+        <td><span class="status good">Correct</span></td>
+      </tr>
+      <tr>
+        <td><strong>Primary Category</strong></td>
+        <td>Electrician</td>
+        <td><span class="status good">Good</span></td>
+      </tr>
+      <tr>
+        <td><strong>Additional Categories</strong></td>
+        <td>Plumber, HVAC Contractor, Electric Generator Shop</td>
+        <td><span class="status good">4 total (within 5-6 best practice)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Hours</strong></td>
+        <td>Open 24 hours, 7 days/week</td>
+        <td><span class="status good">Good</span> (matches 24/7 emergency positioning)</td>
+      </tr>
+      <tr>
+        <td><strong>Online Operating Hours</strong></td>
+        <td>Open 24 hours, 7 days/week</td>
+        <td><span class="status good">Good</span></td>
+      </tr>
+      <tr>
+        <td><strong>Address</strong></td>
+        <td>259 Drum Point Rd Unit 4, Brick, NJ 08723</td>
+        <td><span class="status good">Correct</span></td>
+      </tr>
+      <tr>
+        <td><strong>Phone</strong></td>
+        <td>(732) 575-9245</td>
+        <td><span class="status good">Correct</span></td>
+      </tr>
+      <tr>
+        <td><strong>Website</strong></td>
+        <td>https://www.echelonelectricnj.com/</td>
+        <td><span class="status warning">Domain still says "electric"</span></td>
+      </tr>
+      <tr>
+        <td><strong>Service Areas</strong></td>
+        <td>Toms River, Brick Township, Jackson Township, Point Pleasant, Point Pleasant Beach</td>
+        <td><span class="status good">Good coverage</span></td>
+      </tr>
+      <tr>
+        <td><strong>Service Options</strong></td>
+        <td>On-site services, Online estimates</td>
+        <td><span class="status good">Good</span></td>
+      </tr>
+      <tr>
+        <td><strong>Languages</strong></td>
+        <td>English, Spanish</td>
+        <td><span class="status good">Good</span> (competitive advantage)</td>
+      </tr>
+      <tr>
+        <td><strong>Opening Date</strong></td>
+        <td>May 2017</td>
+        <td><span class="status good">Good</span></td>
+      </tr>
+      <tr>
+        <td><strong>Social Profiles</strong></td>
+        <td>LinkedIn, Facebook, Instagram</td>
+        <td><span class="status warning">All still say "Echelon Electric"</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>GBP Description (Current)</h3>
+  <div class="callout orange">
+    <strong>Issue: Plumbing Not Mentioned</strong> &mdash; The current GBP description references "electrical and HVAC solutions" but does <strong>not mention plumbing at all</strong>, despite "Plumber" being an active GBP category. This creates a disconnect for customers and Google's AI.
+  </div>
+  <div class="copy-box danger">
+    <div class="copy-box-header">Current GBP Description (Needs Update)</div>
+    <div class="copy-text">Echelon Services is a locally owned and operated home services company serving Brick Township and communities throughout central New Jersey. Known across the Jersey Shore for dependable workmanship and professional service, Echelon provides expert electrical and HVAC solutions for residential and commercial customers.
+
+Our services include electrical repairs and upgrades, lighting, panel replacements, generators and battery backup systems, as well as heating and cooling service and system installations. Our licensed technicians are committed to safety, reliability, and delivering a clean, professional experience on every job — from routine maintenance to complex projects.</div>
+  </div>
+
+  <h3>GBP Service Menu Inventory</h3>
+  <p>The service menu is <strong>massively imbalanced</strong>. Electrical has detailed descriptions for 60+ services while plumbing and HVAC have bare-bones listings with no descriptions.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Services Listed</th>
+        <th>Have Descriptions?</th>
+        <th>Assessment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Electrician (Primary)</strong></td>
+        <td>60+ services</td>
+        <td class="cell-good">Yes &mdash; detailed descriptions for each</td>
+        <td><span class="status good">Comprehensive</span></td>
+      </tr>
+      <tr>
+        <td><strong>Plumber</strong></td>
+        <td>4 services (water heater install/repair, water tank install/repair)</td>
+        <td class="cell-bad">No descriptions</td>
+        <td><span class="status critical">Bare minimum</span></td>
+      </tr>
+      <tr>
+        <td><strong>HVAC Contractor</strong></td>
+        <td>14 services (AC, heating, duct, thermostat)</td>
+        <td class="cell-bad">No descriptions</td>
+        <td><span class="status warning">Needs descriptions + verification</span></td>
+      </tr>
+      <tr>
+        <td><strong>Electric Generator Shop</strong></td>
+        <td>3 services (install, repair, sales)</td>
+        <td class="cell-good">Yes &mdash; detailed descriptions</td>
+        <td><span class="status good">Good</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>HVAC Services: GBP vs. Client-Confirmed vs. Website</h3>
+  <div class="callout red">
+    <strong>Critical Discrepancy:</strong> The GBP lists HVAC services (AC installation, duct repair, thermostats) that the client has <strong>not confirmed they actually offer</strong>. Meanwhile, the website's HVAC hub only covers boilers and indoor air quality. This three-way mismatch needs client clarification.
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>HVAC Service</th>
+        <th>Listed in GBP?</th>
+        <th>Client Confirmed?</th>
+        <th>On Website?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Boiler Repair</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES</td>
+      </tr>
+      <tr>
+        <td><strong>Boiler Installation / Replacement</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES</td>
+      </tr>
+      <tr>
+        <td><strong>Boiler Maintenance / Tune-Up</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES</td>
+      </tr>
+      <tr>
+        <td><strong>Humidifier Installation / Service</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES (IAQ page)</td>
+      </tr>
+      <tr>
+        <td><strong>Dehumidifier Installation / Service</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES (IAQ page)</td>
+      </tr>
+      <tr>
+        <td><strong>Air Purification / Air Cleaners</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES (IAQ page)</td>
+      </tr>
+      <tr>
+        <td><strong>Advanced Filtration (HEPA, media)</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES (IAQ page)</td>
+      </tr>
+      <tr>
+        <td><strong>UV Light Air Treatment</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-good">YES (IAQ page)</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial HVAC Services</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-warn">Hub page exists, thin content</td>
+      </tr>
+      <tr style="background: #fff5f5;">
+        <td><strong>AC Installation / Repair / Maintenance</strong></td>
+        <td class="cell-warn">YES (3 services listed)</td>
+        <td class="cell-bad">NOT CONFIRMED</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr style="background: #fff5f5;">
+        <td><strong>Heating System Install / Repair / Maintenance</strong></td>
+        <td class="cell-warn">YES (3 services listed)</td>
+        <td class="cell-bad">NOT CONFIRMED</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr style="background: #fff5f5;">
+        <td><strong>Ductless Heating &amp; A/C Services</strong></td>
+        <td class="cell-warn">YES</td>
+        <td class="cell-bad">NOT CONFIRMED</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr style="background: #fff5f5;">
+        <td><strong>HVAC Duct &amp; Vent Install / Repair</strong></td>
+        <td class="cell-warn">YES (2 services listed)</td>
+        <td class="cell-bad">NOT CONFIRMED</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr style="background: #fff5f5;">
+        <td><strong>Thermostat Installation / Repair</strong></td>
+        <td class="cell-warn">YES (listed twice)</td>
+        <td class="cell-bad">NOT CONFIRMED</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr style="background: #fff5f5;">
+        <td><strong>Duct Cleaning</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-bad">NO</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr style="background: #fff5f5;">
+        <td><strong>Energy Audits / Efficiency Upgrades</strong></td>
+        <td>&mdash;</td>
+        <td class="cell-bad">NO</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout red">
+    <strong>ACTION REQUIRED FROM CLIENT:</strong> The GBP currently lists AC installation, AC repair, heating system installation/repair, ductless HVAC, duct/vent work, and thermostat services. <strong>Does Echelon Services actually perform these services?</strong> If not, these must be removed from GBP &mdash; listing services you don't provide violates Google's guidelines and can lead to negative reviews and suspension. If yes, the website and client checklist need to be updated to match.
+  </div>
+
+  <h3>Plumbing Services: GBP vs. Website</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Plumbing Service</th>
+        <th>Listed in GBP?</th>
+        <th>On Website?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Water Heater Installation</strong></td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr>
+        <td><strong>Water Heater Repair</strong></td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr>
+        <td><strong>Water Tank Installation</strong></td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+      <tr>
+        <td><strong>Water Tank Repair</strong></td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">NO</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>All 4 plumbing services lack descriptions in GBP and have zero corresponding website content. <strong>Does the client currently perform plumbing work?</strong> This also needs clarification. The "Plumber" GBP category was added during the January rebrand but no plumbing evidence exists anywhere.</p>
 </div>
 </div>
 
@@ -720,84 +1019,84 @@ body {
     </thead>
     <tbody>
       <tr>
-        <td><strong>Yelp</strong></td>
+        <td><strong><a href="https://www.yelp.com/biz/echelon-electric-brick-township-2" target="_blank">Yelp</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>Brick Township</td>
         <td>Wrong name; 30 photos (electrical only)</td>
         <td><span class="status critical">Critical</span></td>
       </tr>
       <tr>
-        <td><strong>BBB</strong></td>
+        <td><strong><a href="https://www.bbb.org/us/nj/brick-township/profile/electrical-contractors/echelon-electric-0221-90229907" target="_blank">BBB</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td class="cell-bad">443 Tremont Pl, 08724</td>
         <td>Wrong name + wrong address (different zip!)</td>
         <td><span class="status critical">Critical</span></td>
       </tr>
       <tr>
-        <td><strong>HomeAdvisor</strong></td>
+        <td><strong><a href="https://www.homeadvisor.com/rated.EchelonElectric.123052622.html" target="_blank">HomeAdvisor</a></strong></td>
         <td class="cell-bad">Echelon Construction, LLC</td>
         <td>Brick Township</td>
         <td>Different legal name; 4.0 stars (lower than Google)</td>
         <td><span class="status critical">Critical</span></td>
       </tr>
       <tr>
-        <td><strong>Facebook</strong></td>
+        <td><strong><a href="https://www.facebook.com/111219274031290" target="_blank">Facebook</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>&mdash;</td>
         <td>Wrong name, old branding</td>
         <td><span class="status critical">Critical</span></td>
       </tr>
       <tr>
-        <td><strong>Instagram</strong></td>
+        <td><strong><a href="https://www.instagram.com/Echelon_Electric/" target="_blank">Instagram</a></strong></td>
         <td class="cell-bad">@echelon_electric</td>
         <td>&mdash;</td>
         <td>Handle and name still "Electric"</td>
         <td><span class="status warning">High</span></td>
       </tr>
       <tr>
-        <td><strong>LinkedIn</strong></td>
+        <td><strong><a href="https://www.linkedin.com/in/echelon-electric-575a601a7" target="_blank">LinkedIn</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>&mdash;</td>
         <td>Company page still "Electric"</td>
         <td><span class="status warning">High</span></td>
       </tr>
       <tr>
-        <td><strong>Nextdoor</strong></td>
+        <td><strong><a href="https://nextdoor.com/pages/echelon-electric-brick-nj-1/" target="_blank">Nextdoor</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>Brick, NJ</td>
         <td>Wrong name + <strong>duplicate pages exist</strong></td>
         <td><span class="status warning">High</span></td>
       </tr>
       <tr>
-        <td><strong>Yellow Pages</strong></td>
+        <td><strong><a href="https://www.yellowpages.com/brick-nj/mip/echelon-electric-571812164" target="_blank">Yellow Pages</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>Brick, NJ 08723</td>
         <td>Wrong name; feeds data aggregators</td>
         <td><span class="status warning">High</span></td>
       </tr>
       <tr>
-        <td><strong>Manta</strong></td>
+        <td><strong><a href="https://www.manta.com/c/m1xdq1x/echelon-electric" target="_blank">Manta</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>Brick, NJ</td>
         <td>Wrong name; 0 reviews</td>
         <td><span class="status info">Medium</span></td>
       </tr>
       <tr>
-        <td><strong>Hotfrog</strong></td>
+        <td><strong><a href="https://www.hotfrog.com/company/1219800568295424/echelon-electric/brick-township/electrical-lighting" target="_blank">Hotfrog</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>259 Drum Point Rd</td>
         <td>Unclaimed listing</td>
         <td><span class="status info">Medium</span></td>
       </tr>
       <tr>
-        <td><strong>USCity</strong></td>
+        <td><strong><a href="https://uscity.net/listing/echelon_electric-9496267" target="_blank">USCity</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>259 Drum Point Rd</td>
         <td>Unclaimed; 0 reviews</td>
         <td><span class="status info">Medium</span></td>
       </tr>
       <tr>
-        <td><strong>Chamber of Commerce</strong></td>
+        <td><strong><a href="https://bricktownship.preview.gochambermaster.com/list/member/echelon-electric-494" target="_blank">Chamber of Commerce</a></strong></td>
         <td class="cell-bad">Echelon Electric</td>
         <td>259 Drum Point Rd #4</td>
         <td>Member listing still old name</td>
@@ -849,9 +1148,9 @@ Categories: Electrician, Plumber, HVAC Contractor, Generator Installation</div>
       <tr>
         <td><strong>HVAC</strong></td>
         <td class="cell-good">HVAC Contractor</td>
-        <td class="cell-warn">2 pages (boilers, IAQ)</td>
-        <td class="cell-warn">Thin &mdash; no AC, furnace, heat pump, ductwork</td>
-        <td><span class="status warning">Major</span></td>
+        <td class="cell-warn">HVAC hub + 2 sub-pages (boilers, IAQ)</td>
+        <td class="cell-warn">Hub at /commercial-hvac/ &mdash; only boiler services + indoor air quality content. No AC, furnace, heat pump, or ductwork pages despite GBP listing 14 HVAC services</td>
+        <td><span class="status warning">Major gap</span></td>
       </tr>
       <tr>
         <td><strong>Plumbing</strong></td>
@@ -894,16 +1193,17 @@ Categories: Electrician, Plumber, HVAC Contractor, Generator Installation</div>
   </div>
 
   <div class="tier tier-2">
-    <div class="tier-header">Priority 2: HVAC Expansion Pages</div>
+    <div class="tier-header">Priority 2: HVAC Content Expansion (Based on Client-Confirmed Services)</div>
     <div class="tier-body">
       <ol>
-        <li><strong>Main HVAC Services page</strong> &mdash; Hub page for all HVAC work<span class="tag effort">Expand</span></li>
-        <li><strong>AC Installation &amp; Repair</strong> &mdash; Central air, mini-splits, emergency AC</li>
-        <li><strong>Furnace Repair &amp; Installation</strong> &mdash; Gas and electric furnace service</li>
-        <li><strong>Heat Pump Services</strong> &mdash; Installation, repair, maintenance</li>
-        <li><strong>Ductwork &amp; Ventilation</strong> &mdash; Duct cleaning, repair, installation</li>
-        <li><strong>HVAC Maintenance Plans</strong> &mdash; Annual tune-ups, membership options</li>
+        <li><strong>Expand HVAC hub page</strong> &mdash; Currently at /commercial-hvac/ with thin content. Add residential HVAC content<span class="tag effort">Expand</span></li>
+        <li><strong>Boiler Services page</strong> &mdash; Dedicated page for repair, installation, and maintenance (client confirmed all three)</li>
+        <li><strong>Indoor Air Quality page</strong> &mdash; Exists but expand: humidifiers, dehumidifiers, air purification, HEPA filtration, UV light (all confirmed)</li>
+        <li><strong>Commercial HVAC page</strong> &mdash; Client confirmed commercial HVAC services; expand the hub</li>
       </ol>
+      <div class="detail" style="margin-top: 16px;">
+        <strong>Pending client clarification:</strong> If client confirms AC, heating systems, ductless, duct work, or thermostat services, create pages for those too. Do NOT create pages for services the client doesn't offer.
+      </div>
     </div>
   </div>
 </div>
@@ -912,16 +1212,33 @@ Categories: Electrician, Plumber, HVAC Contractor, Generator Installation</div>
 <!-- ==================== GBP DESCRIPTION ==================== -->
 <div class="container">
 <div class="section">
-  <h2>GBP Description &mdash; Updated Copy</h2>
-  <p>The description from the January audit is still appropriate but should be verified. If it hasn't been updated yet, apply this immediately.</p>
+  <h2>GBP Description &mdash; Needs Plumbing Added</h2>
+  <p>The current description was updated from the January "Echelon Electric" version but <strong>omits plumbing entirely</strong>. Since "Plumber" is an active GBP category, the description should reference plumbing services (once confirmed by client).</p>
 
-  <div class="copy-box">
-    <div class="copy-box-header">Recommended GBP Description (750 characters)</div>
-    <div class="copy-text">Echelon Services (formerly Echelon Electric) is a locally owned full-service home contractor serving Brick Township and central New Jersey. We specialize in electrical work, plumbing services, and HVAC installation and repair. Our certified technicians handle residential and commercial projects including electrical panel upgrades, generator installation, water heater installation, pipe repairs, furnace and AC service, and boiler maintenance. With a perfect 5.0-star rating from 262+ reviews, we deliver safe, reliable service on every project. Available 24/7 for electrical, plumbing, and HVAC emergencies. Proudly serving Brick Township, Toms River, Point Pleasant, and all of Ocean County, NJ.</div>
+  <div class="compare-grid">
+    <div class="compare-card old">
+      <div class="compare-header">Current Description (Missing Plumbing)</div>
+      <div class="compare-body">
+        <p style="font-size:0.88em;">Echelon Services is a locally owned and operated home services company... Echelon provides expert <strong>electrical and HVAC solutions</strong>... electrical repairs and upgrades, lighting, panel replacements, generators and battery backup systems, as well as <strong>heating and cooling service</strong>...</p>
+        <p style="font-size:0.82em; color:var(--red); margin-top:8px;">No mention of plumbing anywhere.</p>
+      </div>
+    </div>
+    <div class="compare-card new">
+      <div class="compare-header">Recommended Description (Add Plumbing)</div>
+      <div class="compare-body">
+        <p style="font-size:0.88em;">Should include: <strong>electrical, plumbing, and HVAC</strong>. Add "(formerly Echelon Electric)" trust bridge. Include social proof (5.0 stars). Mention 24/7 availability and specific service areas.</p>
+        <p style="font-size:0.82em; color:var(--orange); margin-top:8px;">Only update after confirming which plumbing/HVAC services client actually provides.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="callout blue">
-    <strong>Key elements:</strong> "(formerly Echelon Electric)" trust bridge, all three service verticals mentioned, social proof (5.0 stars, 262+ reviews), 24/7 availability, geographic coverage with specific city names for local SEO.
+  <div class="copy-box">
+    <div class="copy-box-header">Recommended GBP Description (750 characters) &mdash; Pending Client Confirmation</div>
+    <div class="copy-text">Echelon Services (formerly Echelon Electric) is a locally owned home services company serving Brick Township and central New Jersey. We specialize in electrical work, plumbing, and HVAC services for residential and commercial customers. Our licensed technicians handle electrical panel upgrades, generator installation, water heater services, boiler repair and installation, indoor air quality solutions, and 24/7 emergency services. With a perfect 5.0-star rating from 262+ reviews, we're committed to safety, reliability, and professional service on every job. Proudly serving Brick Township, Toms River, Jackson Township, Point Pleasant, and surrounding communities.</div>
+  </div>
+
+  <div class="callout orange">
+    <strong>Wait to update</strong> until client confirms: (1) which plumbing services they actually perform, and (2) which HVAC services beyond boilers/IAQ they offer. The description should only claim services the business actually provides.
   </div>
 </div>
 </div>
@@ -930,6 +1247,11 @@ Categories: Electrician, Plumber, HVAC Contractor, Generator Installation</div>
 <div class="container">
 <div class="section">
   <h2>Website FAQ Schema Strategy <span class="status new">Replaces Q&amp;A</span></h2>
+
+  <div class="callout green" style="border-left-color: var(--accent); background: #eff6ff;">
+    <strong>&#9989; B3X Is Handling This</strong> &mdash; Breakthrough3x will build the FAQ page and implement the schema markup as part of our website optimization scope. No action needed from Echelon on this item.
+  </div>
+
   <p>Google's Q&amp;A feature was <strong>discontinued in December 2025</strong>. The replacement is creating FAQ content on your website with structured data markup. Google's AI ("Ask about this place") now pulls answers from your website content, reviews, and photos.</p>
 
   <div class="callout purple">
@@ -1022,77 +1344,140 @@ Categories: Electrician, Plumber, HVAC Contractor, Generator Installation</div>
 <!-- ==================== SERVICE MENU ==================== -->
 <div class="container">
 <div class="section">
-  <h2>GBP Service Menu &mdash; Updated Recommendations</h2>
-  <p>Start with <strong>5-10 core services</strong> rather than 15. Add more over time based on performance. Character limits are strict.</p>
+  <h2>GBP Service Menu &mdash; Current State &amp; Recommendations</h2>
 
-  <div class="callout orange">
-    <strong>Character Limits:</strong> Service Name: <strong>58 characters max</strong>. Service Description: <strong>300 characters max</strong>. Exceeding these causes truncation. Use Google's auto-suggested services when available (better matching).
+  <div class="callout red">
+    <strong>Major Issue: Service Imbalance</strong> &mdash; The current GBP has 60+ electrical services with full descriptions, but plumbing (4 services) and HVAC (14 services) have <strong>zero descriptions</strong>. Google weights services with descriptions higher in search results. The plumbing and HVAC categories are essentially invisible.
   </div>
 
-  <h3>Recommended Core Services (10)</h3>
+  <div class="callout orange">
+    <strong>Character Limits:</strong> Service Name: <strong>58 characters max</strong>. Service Description: <strong>300 characters max</strong>. Use Google's auto-suggested services when available (better matching).
+  </div>
+
+  <h3>Immediate Actions Needed</h3>
   <table class="data-table">
     <thead>
       <tr>
-        <th>Category</th>
-        <th>Service Name (max 58 chars)</th>
-        <th>Price</th>
+        <th>Action</th>
+        <th>Priority</th>
+        <th>Details</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Electrical</strong></td>
-        <td>Electrical Panel Upgrade</td>
-        <td>$1,500 - $3,500</td>
+        <td><strong>Add descriptions to HVAC services</strong></td>
+        <td><span class="status critical">Critical</span></td>
+        <td>14 HVAC services listed with no descriptions. Add 300-char descriptions to each confirmed service</td>
       </tr>
       <tr>
-        <td><strong>Electrical</strong></td>
-        <td>Whole-Home Generator Installation</td>
-        <td>$6,000 - $15,000</td>
+        <td><strong>Add descriptions to plumbing services</strong></td>
+        <td><span class="status critical">Critical</span></td>
+        <td>4 plumbing services listed with no descriptions. Add descriptions once client confirms plumbing scope</td>
       </tr>
       <tr>
-        <td><strong>Electrical</strong></td>
-        <td>EV Charger Installation</td>
-        <td>$500 - $2,500</td>
+        <td><strong>Remove unconfirmed HVAC services</strong></td>
+        <td><span class="status warning">High</span></td>
+        <td>If client doesn't offer AC, heating system install, ductless, duct work, or thermostats &mdash; remove from GBP</td>
       </tr>
       <tr>
-        <td><strong>Plumbing</strong></td>
-        <td>Water Heater Installation &amp; Repair</td>
-        <td>$1,200 - $3,500</td>
+        <td><strong>Fix duplicate "Thermostat installation"</strong></td>
+        <td><span class="status info">Quick fix</span></td>
+        <td>Listed twice in GBP. Remove the duplicate</td>
       </tr>
       <tr>
-        <td><strong>Plumbing</strong></td>
-        <td>Drain Cleaning &amp; Sewer Service</td>
-        <td>$150 - $400</td>
+        <td><strong>Add boiler-specific services</strong></td>
+        <td><span class="status warning">High</span></td>
+        <td>Client confirmed boiler repair/install/maintenance &mdash; these aren't explicitly listed in GBP</td>
       </tr>
       <tr>
-        <td><strong>Plumbing</strong></td>
-        <td>Emergency Plumbing Repair</td>
-        <td>$250 - $1,000+</td>
-      </tr>
-      <tr>
-        <td><strong>HVAC</strong></td>
-        <td>Central AC Installation &amp; Repair</td>
-        <td>$4,000 - $8,000</td>
-      </tr>
-      <tr>
-        <td><strong>HVAC</strong></td>
-        <td>Furnace Repair &amp; Replacement</td>
-        <td>$150 - $5,000</td>
-      </tr>
-      <tr>
-        <td><strong>HVAC</strong></td>
-        <td>Boiler Service &amp; Replacement</td>
-        <td>$200 - $6,000</td>
-      </tr>
-      <tr>
-        <td><strong>Multi</strong></td>
-        <td>24/7 Emergency Home Services</td>
-        <td>Call for pricing</td>
+        <td><strong>Add IAQ services</strong></td>
+        <td><span class="status info">Medium</span></td>
+        <td>Client confirmed humidifier, dehumidifier, air purification, HEPA filtration, UV light &mdash; not in GBP</td>
       </tr>
     </tbody>
   </table>
 
-  <p><strong>Maintenance:</strong> Review service list quarterly. Update immediately when adding new services or running promotions.</p>
+  <h3>Client-Confirmed HVAC Services (From Slack &mdash; Phil Mutrie)</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Client Status</th>
+        <th>In GBP?</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Boiler Repair</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>Boiler Installation / Replacement</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>Boiler Maintenance / Tune-Up</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>Humidifier Installation / Service</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>Dehumidifier Installation / Service</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>Air Purification / Air Cleaners</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>Advanced Filtration (HEPA)</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>UV Light Air Treatment</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-bad">No (add)</td>
+        <td>Add with description</td>
+      </tr>
+      <tr>
+        <td>Commercial HVAC Services</td>
+        <td class="cell-good">YES</td>
+        <td class="cell-warn">Partially (no description)</td>
+        <td>Add description</td>
+      </tr>
+      <tr>
+        <td>Duct Cleaning</td>
+        <td class="cell-bad">NO</td>
+        <td>&mdash;</td>
+        <td>Do not add</td>
+      </tr>
+      <tr>
+        <td>Energy Audits / Efficiency Upgrades</td>
+        <td class="cell-bad">NO</td>
+        <td>&mdash;</td>
+        <td>Do not add</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Maintenance:</strong> Review service list quarterly. Update immediately when adding new services or running promotions. Remove services the business no longer offers.</p>
 </div>
 </div>
 
